@@ -76,7 +76,7 @@ this.start = function() {
   
   
   
-  
+  console.log("OK nodeCEC");
   var cec = new NodeCEC();
 
 //start cec connection
