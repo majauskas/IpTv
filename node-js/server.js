@@ -65,7 +65,7 @@ this.start = function() {
 		});
 
 		cec.on('key', function(data) {
-		   console.log(data.name);
+		   console.log("minde",data.name);
 		   io.sockets.emit("SOCKET-REMOTE-CONTROLL", {key:data.name});
 		   
 		});
