@@ -21,7 +21,7 @@ function createWindow () {
   if(process.argv[2] == "prod"){
 	  isProd = true;
   }
-  isProd = false;
+//  isProd = false;
   if(isProd){
 	  mainWindow = new BrowserWindow({show: false, fullscreen:true,autoHideMenuBar:true, darkTheme: true, disableAutoHideCursor:true, webPreferences: {nodeIntegration: false}})
   }else{
