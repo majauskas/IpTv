@@ -47,6 +47,7 @@ this.start = function() {
   
 		socket.on('socket-on-enter', function (data) {
 			console.log("------- socket-on-enter ----------------",data);
+			 player.init(data);
 //			callback({});		
 		});
 	  	

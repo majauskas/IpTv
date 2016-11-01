@@ -42,12 +42,22 @@ $(function () {
 	var socket = io.connect();
 	socket.on('SOCKET-REMOTE-CONTROLL', function (data) {
 		console.log("socket on ",data);
+		var chanel = "http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3806.ts";
+		
 		if(data.key == "left"){
 			$('#item1').focus();
+			chanel = "http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3806.ts";
 		}
 		else if(data.key == "right"){
 			$('#item2').focus();
+			chanel = "http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3807.ts";
 		}
+		else if(data.key == "select"){
+			socket.emit('socket-on-enter', chanel);
+			$('#item2').focus();
+		}
+
+		
 	});
 
 	
