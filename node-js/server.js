@@ -6,7 +6,7 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var os = require('os');
 var player = require("./omxplayer.js");
-var NodeCEC = require('../nodecec')
+var NodeCEC = require('nodecec')
 
 
 var Server = function() {
