@@ -42,10 +42,10 @@ $(function () {
 	var socket = io.connect();
 	socket.on('SOCKET-REMOTE-CONTROLL', function (data) {
 		console.log("socket on ",data);
-		if(data == "left"){
+		if(data.key == "left"){
 			$('#item1').focus();
 		}
-		else if(data == "right"){
+		else if(data.key == "right"){
 			$('#item2').focus();
 		}
 	});
