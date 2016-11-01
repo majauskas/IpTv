@@ -67,7 +67,12 @@ this.start = function() {
 
 		cec.on('key', function(data) {
 		   console.log("minde",data.name);
-		   io.sockets.emit("SOCKET-REMOTE-CONTROLL", {key:data.name});
+		   if(data.name=="exit"){
+			   player.exit();
+		   }else{
+			   io.sockets.emit("SOCKET-REMOTE-CONTROLL", {key:data.name});
+		   }
+		   
 		   
 		});
 
