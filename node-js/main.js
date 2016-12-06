@@ -48,7 +48,7 @@ function createWindow () {
   
   mainWindow.webContents.on('did-finish-load', function() {
 	    setTimeout(function(){
-	      mainWindow.show();
+//	      mainWindow.show();
 	    }, 40);
   });
 }

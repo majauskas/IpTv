@@ -10,6 +10,7 @@ module.exports.init = function (source) {
 //	}
 	
 //	var args = [source, '-live', '--win', '1200, 600, 1915, 1075'];
+//	--fps 25.000000
 	var args = [source];
 	omxProcess = spawn('omxplayer', args);
 	omxProcess.stdin.setEncoding('utf-8');
