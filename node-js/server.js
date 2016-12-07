@@ -45,9 +45,9 @@ this.start = function() {
     console.log('app listening at http://%s:%s', host, port);
   
     setTimeout(function() {
-        database.CHANNELS.remove({}, function (err, data) {});
-        database.PROGRAMS.remove({}, function (err, data) {});
-        database.ONDEMAND.remove({}, function (err, data) {});
+//        database.CHANNELS.remove({}, function (err, data) {});
+//        database.PROGRAMS.remove({}, function (err, data) {});
+//        database.ONDEMAND.remove({}, function (err, data) {});
         
         
 //        setChannelsOndemandUrl();
