@@ -78,19 +78,20 @@ this.start = function() {
   
 		socket.on('socket-on-enter', function (data) {
 			
-//			 player.exit();
-			console.log("killing omxplayer");
-			exec("kill -9 $(ps aux | grep 'omxplayer' | awk '{print $2}')");
-			console.log("kill omxplayer ok");
-			 setTimeout(function() {
-				 console.log("------- socket-on-enter ----------------",data);
-				 player.init(data);
-			 }, 1000);
+////			 player.exit();
+//			console.log("killing omxplayer");
+//			exec("kill -9 $(ps aux | grep 'omxplayer' | awk '{print $2}')");
+//			console.log("kill omxplayer ok");
+//			 setTimeout(function() {
+//				 console.log("------- socket-on-enter ----------------",data);
+//				 player.init(data);
+//			 }, 1000);
 			 
 		});
 		
 		
 		socket.on('socket-mobile-play', function (file) {
+			player.exit();
 			console.log("------- socket-mobile-play ----------------",file);
 			player.init(file);	
 		});
