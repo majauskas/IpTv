@@ -5,7 +5,7 @@ var os = require('os');
 
 //var url = "mongodb://ajauskas.homenet.org/home-system";
 var url = "mongodb://192.168.7.94/test";
-console.log(os.hostname().toLowerCase());
+console.log("hostname",os.hostname().toLowerCase());
 if(os.hostname().toLowerCase() === "raspberrypi"){
 	url = "mongodb://192.168.0.2/home-system-tv";
 }
@@ -67,7 +67,17 @@ var ProgramsSchema = new Schema({
   subgenre: String,
   prima: {type : Boolean, 'default': false},
   img_small: String,
-  description: String 
+  img_big: String,
+  img_small_url: String,
+  img_big_url: String,
+  description: String,
+  description2: String,
+  uscita: String,
+  nazione: String,
+  audio: String,
+  age: String,
+  regia: String,
+  cast: String
 },{toJSON:{virtuals: true}});
 
 module.exports.PROGRAMS = mongoose.model('PROGRAMS', ProgramsSchema);

@@ -15,8 +15,15 @@ http://guidatv.sky.it/app/guidatv/images/epgimages/2015/4/24/il-giro-del-mondo-i
 http://guidatv.sky.it/app/guidatv/images/epgimages/channels/133_image.jpg
 http://guidatv.sky.it/app/guidatv/images/epgimages/channels/48961_image.jpg
 
+http://guidatv.sky.it/EpgBackend/getprogrammazione.do?idprogramma={pid}
+http://guidatv.sky.it/EpgBackend/wesuggest.do?pid={pid}
+http://guidatv.sky.it/EpgBackend/getpvodprog.do?{pid}
 
+http://guidatv.sky.it/guidatv/programma/intrattenimento/fiction/amici-di-letto_405819.shtml?eventid=90906059
 
+http://guidatv.sky.it/guidatv/programma/intrattenimento/fiction/{normalizedtitle}_{pid}.shtml?eventid={id}
+
+http://guidatv.sky.it/guidatv/programma/intrattenimento/fiction/the-affair-una-relazione-pericolosa_532111.shtml?eventid=90889334
 
 
 http://guidatv.sky.it/app/guidatv/images/epgimages/2016/11/17/grimsby-wf-visore.73393_big.jpg

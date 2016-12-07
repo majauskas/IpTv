@@ -12,6 +12,8 @@ var database = require('./database.js');
 var http = require('http');
 var request = require('sync-request');
 var parsers = require("playlist-parser");
+var utils = require('./utils.js');
+
 
 var Server = function() {
 
@@ -42,13 +44,29 @@ this.start = function() {
     var port = server.address().port;
     console.log('app listening at http://%s:%s', host, port);
   
-    database.CHANNELS.remove({}, function (err, data) {});
-    database.PROGRAMS.remove({}, function (err, data) {});
-    setChannels();
-    setChannelsLiveUrl();
-    setPrograms();
-    setEvents();
-//    setChannelsOndemandUrl(); 
+    setTimeout(function() {
+        database.CHANNELS.remove({}, function (err, data) {});
+        database.PROGRAMS.remove({}, function (err, data) {});
+        database.ONDEMAND.remove({}, function (err, data) {});
+        
+        
+        setChannelsOndemandUrl();
+        utils.sleep(1000);
+        setChannels();
+        utils.sleep(2000);
+        setChannelsLiveUrl();
+        utils.sleep(5000);
+        setPrograms();
+        utils.sleep(5000);
+        setEvents();
+        utils.sleep(5000);
+        setEvents();
+        utils.sleep(5000);
+        skyLoader.getProgrammaDetail();
+        
+        
+    }, 5000);
+    
 
     
   });
@@ -66,6 +84,14 @@ this.start = function() {
 		socket.on('socket-mobile-play', function (file) {
 			console.log("------- socket-mobile-play ----------------",file);
 			player.init(file);	
+		});
+		socket.on('socket-mobile-pause', function () {
+			console.log("------- socket-mobile-pause ----------------");
+			player.pause();	
+		});
+		socket.on('socket-mobile-stop', function () {
+			console.log("------- socket-mobile-stop ----------------");
+			player.exit();	
 		});
 		
 	  	
@@ -116,39 +142,9 @@ return;
 	  
   });
 
-  
-  app.get('/play', function(req, res) {
-	  player.init('http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3806.ts');
-	  res.send({});
-  });
-  
-  app.get('/player/:command', function(req, res) {
-	  player.command(req.params.command);
-	  res.send({});
-  });  
-
-  app.get('/exit', function(req, res) {
-	  player.exit();
-	  res.send({});
-  });  
-  
-
-  
-app.get("/show/:channel", function (req, res) {
-	  database.PROGRAMS.findOne({channel:req.params.channel}).exec(function (err, doc) {
-	        var base64dataa = new Buffer(doc.channellogo.data, 'binary').toString('base64');
-	        res.contentType('image/png')
-	        res.send(doc.channellogo.data);
-	  })
-});
 
 
-app.get("/program/:channel", function (req, res) {
-	  database.PROGRAMS.findOne({channel:req.params.channel}).exec(function (err, doc) {
-//	        res.contentType('image/png')
-	        res.send(doc);
-	  })
-});
+
 app.get("/set-programs", function (req, res) {
 	  setPrograms();
 	  res.send({});
@@ -169,20 +165,52 @@ app.get("/get-channels", function (req, res) {
 	});
 });
 
-app.get("/get-programs", function (req, res) {
+app.get("/get-programs/:genere", function (req, res) {
+	var genere = req.params.genere;
 	var startDate = new Date();
 	startDate.setHours(startDate.getHours() - 1);
 	var endDate = new Date();
 	endDate.setHours(endDate.getHours() +1);
-	database.PROGRAMS.find({startDate: {$gte:startDate, $lt:endDate}, file:{$ne : null}}).sort('starttime').exec(function (err, programs) {
-//		programs.forEach(function(program) {
-////			console.log(program.startDate);
-////			var startDate = program.startDate;
-////			startDate.setMinutes(startDate.getMinutes() - 1);
-//		});
+	database.PROGRAMS.find({ genre:genere, startDate: {$gte:startDate, $lt:endDate}, file:{$ne : null}}).sort('starttime').exec(function (err, programs) {
 		res.send(programs); 
 	});
 });
+
+
+app.get("/get-genere", function (req, res) {
+	var startDate = new Date();
+	startDate.setHours(startDate.getHours() - 1);
+	var endDate = new Date();
+	endDate.setHours(endDate.getHours() +1);	
+	database.PROGRAMS.aggregate(
+				{$match : {startDate : {$gte:startDate, $lt:endDate}}},
+				{$group : {_id : "$genre", total : { $sum : 1 }}},
+				{$sort : {total : 1}}
+			).exec(function (err, programs) {
+		res.send(programs); 
+	});
+});
+
+app.get("/get-ondemand-groups", function (req, res) {
+	database.ONDEMAND.aggregate(
+				{$match : {title : {$ne:""}}},
+				{$group : {_id : "$title", total : { $sum : 1 }}},
+				{$sort : {total : 1}}
+			).exec(function (err, programs) {
+		res.send(programs); 
+	});
+});
+
+
+app.get("/get-ondemand-programs/:genere", function (req, res) {
+	var genere = req.params.genere;
+	database.ONDEMAND.find({ title:genere, file:{$ne : null}}).sort('name').exec(function (err, programs) {
+		res.send(programs); 
+	});
+});
+
+
+
 
 
 };
@@ -200,7 +228,7 @@ function setChannels() {
 		var imgBase64 = new Buffer(body, 'binary').toString('base64');
 	    database.CHANNELS.findOneAndUpdate({id : channel.id}, {name : channel.name, number : channel.number, service : channel.service, imgBase64 : imgBase64}, {upsert : true}, function (err, res) {});
 	});
-	console.log("-- setChannels End --");
+	console.log("-- setChannels End --", new Date());
 }
 
 function setPrograms() {
@@ -234,12 +262,13 @@ function setPrograms() {
   	    	  });
 //	  	     });
 		  });
-		  console.log("-- setPrograms End --");
+		  console.log("-- setPrograms End --", new Date());
 	  });
 	  
 }
 
 function setEvents() {
+//	database.PROGRAMS.find({img_big:null, img_small:{$ne:null}}).exec(function (err, programs) {
 	database.PROGRAMS.find({img_small:null,description:null}).exec(function (err, programs) {
 		console.log(programs.length);
 		  programs.forEach(function(program) {
@@ -247,18 +276,17 @@ function setEvents() {
 			 if(eventDescription){
 				 database.PROGRAMS.findOneAndUpdate({id: program.id}, {
 					img_small: eventDescription.img_small,
+//					img_big: eventDescription.img_big,
+					img_small_url: eventDescription.img_small_url,
+//					img_big_url: eventDescription.img_big_url,
 	    		    description: eventDescription.description
 	    		  }, {upsert : true}, function (err, res) {});	
 			 }
 		  });
-		  console.log("-- setEvents End --");
+		  console.log("-- setEvents End --", new Date());
 	});	
 	
 }
-//function setEvents() {
-//	var eventDescription = skyLoader.getEventDescription(90178408);
-//	 console.log(eventDescription);	
-//}
 
 
 function setChannelsLiveUrl() {
@@ -305,7 +333,7 @@ function setChannelsLiveUrl() {
 	        	database.CHANNELS.findOneAndUpdate({name: title}, {file: item.file}, {upsert : false}, function (err, res) {});
 				  
 			  });
-	        console.log("-- setChannelsLiveUrl End --");
+	        console.log("-- setChannelsLiveUrl End --", new Date());
 	        
 	    }
 	});
@@ -358,7 +386,7 @@ function setChannelsOndemandUrl() {
 					console.log(title,"\t\t", entry,"\t\t", item.title);
 				}
 			  });
-	        console.log("-- setChannelsOndemandUrl End --");
+	        console.log("-- setChannelsOndemandUrl End --", new Date());
 	        
 	    }
 	});

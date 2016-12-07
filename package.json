@@ -15,7 +15,8 @@
     "nodecec": "0.0.3",
     "mongoose": "3.8.24",
     "sync-request": "3.0.1",
-    "playlist-parser": "*"
+    "playlist-parser": "0.0.12",
+    "cheerio": "0.22.0"
   },
   "scripts": {
     "start": "electron ."

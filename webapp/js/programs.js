@@ -1,33 +1,16 @@
 $(document).on("pagecreate","#PROGRAMS-PAGE", function(){
 
+	var genere = $(this).attr("genere");
 	$.ajax({
 		type : 'GET',
-//		url : "/get-channels",
-		url : "/get-programs",
+		url : "/get-programs/"+genere,
 		success: function(response) {
 			console.log(response);
 			$.each(response, function (i, obj) {obj.target = JSON.stringify(obj);});
 			$("#listview-programs").empty();
 			$("#template-programs").tmpl( response ).appendTo( "#listview-programs" );		
 			$("#listview-programs").listview("refresh");
-			
-//			
-//			$('#listview-programs li .delete-btn').on('touchend', function(e) {
-//			    e.preventDefault();
-//			    var _id = $(this).parents('li').attr("id");
-//			    $(this).parents('li').slideUp('fast', function() {
-//				    $(this).remove();
-//				    setTimeout(function() {
-//						$.ajax({
-//							global: false,
-//							type : 'DELETE',
-//							url : "/Event/"+_id,
-//					        error: UTILITY.httpError
-//						});
-//				    }, 0);
-//			    });
-//			});
-			
+
         },
         error: UTILITY.httpError
 	});	
@@ -36,15 +19,20 @@ $(document).on("pagecreate","#PROGRAMS-PAGE", function(){
 });
 
 $(function() {
-	var socket = io.connect();
-	
-	
 	
 	$("#listview-programs").on("click", "li", function (event) {
 		
 		var data = jQuery.parseJSON($(this).attr("data"));
-//		console.log(data);
-		socket.emit('socket-mobile-play', data.file);
+		
+		$("#PROGRAM-DETAIL-PAGE").attr("file", data.file);
+		$('#PROGRAM-DETAIL-PAGE #title').text(data.title);
+		$('#PROGRAM-DETAIL-PAGE #description').text(data.description);
+		$('#PROGRAM-DETAIL-PAGE #img').attr("src","data:image/png;base64,"+data.img_big);
+		
+		
+		try {$("#PROGRAM-DETAIL-PAGE").page('destroy').page();} catch (e) {}
+		$.mobile.changePage("#PROGRAM-DETAIL-PAGE");
+		
 //		$('#EDIT-SCHEDULER-PAGE #name').val(data.name);
 //		$("#EDIT-SCHEDULER-PAGE").attr("data", $(this).attr("data"));
 //		
@@ -52,6 +40,11 @@ $(function() {
 //		$.mobile.changePage("#EDIT-SCHEDULER-PAGE");
 		
 	});
+	
+	
+	$("#PROGRAMS-PAGE").on("click", "#btIndietro", function (event) {
+		$.mobile.changePage("#GENERE-PAGE");		
+	});	
 
 
 });
