@@ -50,19 +50,19 @@ this.start = function() {
         database.ONDEMAND.remove({}, function (err, data) {});
         
         
-        setChannelsOndemandUrl();
-        utils.sleep(1000);
-        setChannels();
-        utils.sleep(2000);
-        setChannelsLiveUrl();
-        utils.sleep(5000);
-        setPrograms();
-        utils.sleep(5000);
-        setEvents();
-        utils.sleep(5000);
-        setEvents();
-        utils.sleep(5000);
-        skyLoader.getProgrammaDetail();
+//        setChannelsOndemandUrl();
+//        utils.sleep(1000);
+//        setChannels();
+//        utils.sleep(2000);
+//        setChannelsLiveUrl();
+//        utils.sleep(5000);
+//        setPrograms();
+//        utils.sleep(5000);
+//        setEvents();
+//        utils.sleep(5000);
+//        setEvents();
+//        utils.sleep(5000);
+//        skyLoader.getProgrammaDetail();
         
         
     }, 5000);
