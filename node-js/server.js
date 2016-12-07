@@ -120,14 +120,37 @@ this.start = function() {
 
 		cec.on('key', function(data) {
 		   console.log("key:",data.name, data);
-		   if(data.name=="exit"){
-			   player.exit();
-		   }else if(data.name=="left"){
-			   console.log("---left---");
-		   }else{
-			   io.sockets.emit("SOCKET-REMOTE-CONTROLL", {key:data.name});
-		   }
+//		   pause { code: '46', name: 'pause' }
+//		   play { code: '44', name: 'play' }
+//		   stop { code: '45', name: 'stop' }
+//		   exit { code: 'd', name: 'exit' }
+//		   select { code: '0', name: 'select' }
+//		   forward { code: '4b', name: 'forward' }
+//		   backward { code: '4c', name: 'backward' }
+//		   F2 { code: 'red', name: 'F2' }
+//		   F3 { code: 'green', name: 'F3' }
+//		   F4 { code: 'yellow', name: 'F4' }
+//		   F1 { code: 'blue', name: 'F1' }
+//		   key: right { code: '4', name: 'right' }
+//		   key: left { code: '3', name: 'left' }
+//		   key: up { code: '1', name: 'up' }
+//		   key: down { code: '2', name: 'down' }
+
 		   
+		   
+		   if(data.name=="stop"){
+			   player.exit();
+		   }else if(data.name=="pause"){
+			   player.pause();
+		   }else if(data.name=="left"){
+			   player.command("left arrow");
+		   }else if(data.name=="right"){
+			   player.command("right arrow");
+		   }else if(data.name=="down"){
+			   player.command("down arrow");
+		   }else if(data.name=="up"){
+			   player.command("up arrow");
+		   }
 		   
 		});
 
