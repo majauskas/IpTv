@@ -26,7 +26,7 @@ module.exports.init = function (source) {
 
 module.exports.play = function () { omxProcess.stdin.write('p'); }
 module.exports.pause = function () { omxProcess.stdin.write('p'); }
-module.exports.exit = function () { omxProcess.stdin.write('q'); }
+module.exports.exit = function () { if(omxProcess) omxProcess.stdin.write('q'); }
 module.exports.volUp = function () { omxProcess.stdin.write('+'); }
 module.exports.volDown = function () { omxProcess.stdin.write('-'); }
 module.exports.command = function (command) { omxProcess.stdin.write(command); }
