@@ -92,10 +92,10 @@ this.start = function() {
 		
 		socket.on('socket-mobile-play', function (file) {
 			player.exit();
-			 setTimeout(function() {
+//			 setTimeout(function() {
 			console.log("------- socket-mobile-play ----------------",file);
 			player.init(file);
-			 }, 500);
+//			 }, 500);
 		});
 		socket.on('socket-mobile-pause', function () {
 			console.log("------- socket-mobile-pause ----------------");
