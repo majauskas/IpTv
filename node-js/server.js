@@ -76,26 +76,24 @@ this.start = function() {
   var io = require('socket.io')(server);
   io.sockets.on('connection', function (socket) {  
   
-		socket.on('socket-on-enter', function (data) {
-			
-////			 player.exit();
-//			console.log("killing omxplayer");
-//			exec("kill -9 $(ps aux | grep 'omxplayer' | awk '{print $2}')");
-//			console.log("kill omxplayer ok");
-//			 setTimeout(function() {
-//				 console.log("------- socket-on-enter ----------------",data);
-//				 player.init(data);
-//			 }, 1000);
-			 
-		});
+//		socket.on('socket-on-enter', function (data) {
+//			
+//////			 player.exit();
+////			console.log("killing omxplayer");
+////			exec("kill -9 $(ps aux | grep 'omxplayer' | awk '{print $2}')");
+////			console.log("kill omxplayer ok");
+////			 setTimeout(function() {
+////				 console.log("------- socket-on-enter ----------------",data);
+////				 player.init(data);
+////			 }, 1000);
+//			 
+//		});
 		
 		
 		socket.on('socket-mobile-play', function (file) {
 			player.exit();
-//			 setTimeout(function() {
 			console.log("------- socket-mobile-play ----------------",file);
 			player.init(file);
-//			 }, 500);
 		});
 		socket.on('socket-mobile-pause', function () {
 			console.log("------- socket-mobile-pause ----------------");
@@ -106,9 +104,7 @@ this.start = function() {
 			player.exit();	
 		});
 		
-	  	
-		  console.log("OK nodeCEC");
-return;		  
+//return;		  
 		  var cec = new NodeCEC();
 
 		//start cec connection
@@ -123,9 +119,11 @@ return;
 		});
 
 		cec.on('key', function(data) {
-		   console.log("minde",data.name);
+		   console.log("key:",data.name, data);
 		   if(data.name=="exit"){
 			   player.exit();
+		   }else if(data.name=="left"){
+			   console.log("---left---");
 		   }else{
 			   io.sockets.emit("SOCKET-REMOTE-CONTROLL", {key:data.name});
 		   }
@@ -280,9 +278,12 @@ function setPrograms() {
 }
 
 function setEvents() {
+	var c = 0;
 //	database.PROGRAMS.find({img_big:null, img_small:{$ne:null}}).exec(function (err, programs) {
 	database.PROGRAMS.find({img_small:null,description:null},{ id: 1 }).exec(function (err, programs) {
 		  programs.forEach(function(program) {
+			 c++;
+			 console.log(c);
 			 var eventDescription = skyLoader.getEventDescription(program.id);
 			 if(eventDescription){
 				 database.PROGRAMS.findOneAndUpdate({id: program.id}, {
