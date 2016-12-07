@@ -1,5 +1,7 @@
 
-var spawn = require('child_process').spawn;
+var child_process = require('child_process');
+var exec = child_process.exec;
+var spawn = child_process.spawn;
 
 var omxProcess = null;
 
@@ -26,7 +28,10 @@ module.exports.init = function (source) {
 
 module.exports.play = function () { omxProcess.stdin.write('p'); }
 module.exports.pause = function () { omxProcess.stdin.write('p'); }
-module.exports.exit = function () { if(omxProcess) omxProcess.stdin.write('q'); }
+module.exports.exit = function () { 
+//	if(omxProcess) omxProcess.stdin.write('q');
+	exec("kill -9 $(ps aux | grep 'omxplayer' | awk '{print $2}')");
+}
 module.exports.volUp = function () { omxProcess.stdin.write('+'); }
 module.exports.volDown = function () { omxProcess.stdin.write('-'); }
 module.exports.command = function (command) { omxProcess.stdin.write(command); }
