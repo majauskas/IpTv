@@ -44,6 +44,8 @@
 	<script type="text/javascript">
 			$(function() {
 				$("body>[data-role='panel']").panel().trigger( "create" );
+
+// 				$.mobile.changePage("#GENERE-PAGE");
 			});
 	</script>
 	
@@ -94,7 +96,6 @@
 	</div>
 </div>
 
-<!-- style="width: 100%; height: 100px"  -->
 <div id="PROGRAM-DETAIL-PAGE" data-role="page">
 	<div data-role="header" data-position="fixed">
 		<a id="btIndietro" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l"></a>
@@ -116,7 +117,7 @@
 
 
 
-<div id="ONDEMAND-GROUPS-PAGE" data-role="page" class="ui-page-active">
+<div id="ONDEMAND-GROUPS-PAGE" data-role="page">
 	<div data-role="header" data-position="fixed">
 		<a href="#HOME-PAGE" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-home"></a>
 		<h1>Ondemand<br><font style="white-space:normal;font-size: .7em; font-weight:normal;"></font></h1>
@@ -153,8 +154,8 @@
 
 <div id="menu-panel" data-role="panel" data-position="right" data-display="overlay" data-theme="a">
 	<ul data-role="listview" data-inset="false" class="ui-nodisc-icon">
-		<li data-icon="wifi"><a href="#GENERE-PAGE">Live Tv</a></li>
-		<li data-icon="sensor"><a href="#ONDEMAND-GROUPS-PAGE">Ondemand Tv</a></li>
+		<li><a href="#GENERE-PAGE">Live Tv</a></li>
+		<li><a href="#ONDEMAND-GROUPS-PAGE">Ondemand Tv</a></li>
 	</ul>
 </div> 
 	 

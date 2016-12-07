@@ -45,7 +45,7 @@ this.start = function() {
     var port = server.address().port;
     console.log('app listening at http://%s:%s', host, port);
   
-    setTimeout(function() {
+//    setTimeout(function() {
 //        database.CHANNELS.remove({}, function (err, data) {});
 //        database.PROGRAMS.remove({}, function (err, data) {});
 //        database.ONDEMAND.remove({}, function (err, data) {});
@@ -66,7 +66,7 @@ this.start = function() {
 //        skyLoader.getProgrammaDetail();
         
         
-    }, 5000);
+//    }, 5000);
     
 
     
@@ -279,8 +279,7 @@ function setPrograms() {
 
 function setEvents() {
 //	database.PROGRAMS.find({img_big:null, img_small:{$ne:null}}).exec(function (err, programs) {
-	database.PROGRAMS.find({img_small:null,description:null}).exec(function (err, programs) {
-		console.log(programs.length);
+	database.PROGRAMS.find({img_small:null,description:null},{ id: 1 }).exec(function (err, programs) {
 		  programs.forEach(function(program) {
 			 var eventDescription = skyLoader.getEventDescription(program.id);
 			 if(eventDescription){
