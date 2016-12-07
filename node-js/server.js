@@ -5,6 +5,7 @@ var path = require('path');
 var fs = require('fs');
 var bodyParser = require('body-parser');
 var os = require('os');
+var exec = require('child_process').exec;
 var player = require("./omxplayer.js");
 var skyLoader = require("./sky-loader.js");
 var NodeCEC = require('nodecec')
@@ -77,11 +78,14 @@ this.start = function() {
   
 		socket.on('socket-on-enter', function (data) {
 			
-			 player.exit();
+//			 player.exit();
+			console.log("killing omxplayer");
+			exec("kill -9 $(ps aux | grep 'omxplayer' | awk '{print $2}')");
+			console.log("kill omxplayer ok");
 			 setTimeout(function() {
 				 console.log("------- socket-on-enter ----------------",data);
 				 player.init(data);
-			 }, 1000)
+			 }, 1000);
 			 
 		});
 		
