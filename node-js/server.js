@@ -76,9 +76,13 @@ this.start = function() {
   io.sockets.on('connection', function (socket) {  
   
 		socket.on('socket-on-enter', function (data) {
-			console.log("------- socket-on-enter ----------------",data);
+			
 			 player.exit();
-			 player.init(data);
+			 setTimeout(function() {
+				 console.log("------- socket-on-enter ----------------",data);
+				 player.init(data);
+			 }, 1000)
+			 
 		});
 		
 		

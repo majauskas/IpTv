@@ -30,7 +30,9 @@ module.exports.play = function () { omxProcess.stdin.write('p'); }
 module.exports.pause = function () { omxProcess.stdin.write('p'); }
 module.exports.exit = function () { 
 //	if(omxProcess) omxProcess.stdin.write('q');
+	console.log("killing omxplayer");
 	exec("kill -9 $(ps aux | grep 'omxplayer' | awk '{print $2}')");
+	console.log("kill omxplayer ok");
 }
 module.exports.volUp = function () { omxProcess.stdin.write('+'); }
 module.exports.volDown = function () { omxProcess.stdin.write('-'); }
