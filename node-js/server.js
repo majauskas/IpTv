@@ -64,6 +64,7 @@ this.start = function() {
 //        setEvents();
 //        utils.sleep(5000);
 //        skyLoader.getProgrammaDetail();
+    
         
         
 //    }, 5000);
@@ -193,7 +194,7 @@ app.get("/set-events", function (req, res) {
 
 
 app.get("/get-channels", function (req, res) {
-	database.CHANNELS.find().sort('name').exec(function (err, channels) {
+	database.CHANNELS.find({file:{$ne:null}}).sort('name').exec(function (err, channels) {
 		 res.send(channels); 
 	});
 });

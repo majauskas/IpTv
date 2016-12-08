@@ -101,7 +101,7 @@ module.exports.getEventDescription = function (id, callback) {
 	module.exports.getProgrammaDetail = function () {
 
 		var c =0;
-		database.PROGRAMS.find({description2:null}).exec(function (err, programs) {
+		database.PROGRAMS.find({description2:null,genre:"film"},{ id: 1,genre: 1,subgenre: 1,normalizedtitle: 1,pid: 1 }).exec(function (err, programs) {
 				console.log(programs.length);
 				
 				  programs.forEach(function(program) {

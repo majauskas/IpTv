@@ -39,6 +39,7 @@
 <script type="text/javascript" src="js/genere.js" charset="iso-8859-1"></script>
 <script type="text/javascript" src="js/program-detail.js" charset="iso-8859-1"></script>
 <script type="text/javascript" src="js/ondemand.js" charset="iso-8859-1"></script>
+<script type="text/javascript" src="js/channels.js" charset="iso-8859-1"></script>
 
 
 	<script type="text/javascript">
@@ -55,7 +56,31 @@
 
 	<body>
 
-<div id="GENERE-PAGE" data-role="page" class="ui-page-active">
+
+<div id="CHANNELS-PAGE" data-role="page" class="ui-page-active">
+	<div data-role="header" data-position="fixed">
+		<a id="btIndietro" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l"></a>
+		<h1>Programs<br><font style="white-space:normal;font-size: .7em; font-weight:normal;"></font></h1>
+		<a id="btPause" style="right: 115px" class="ui-btn ui-btn-right ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-delete"></a>
+		<a id="btStop"  style="right: 60px" class="ui-btn ui-btn-right ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-power"></a>
+		<a href="#menu-panel" class="ui-btn ui-btn-right ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-bars"></a>
+	</div>
+	<div data-role="main" class="ui-content" style="text-align: center; width: auto;" data-iscroll>        
+		<ul data-role="listview" data-inset="false" id="listview-channels" class="ui-nodisc-icon"></ul>	
+		<script id="template-channels" type="text/x-jquery-tmpl">
+					<li class="ui-nodisc-icon" id='${id}' data='${target}'>					
+					<a>
+						<p><font style="white-space:normal;font-weight:bold;">${name}</font></p>
+						<p class='ui-li-aside' style='margin-right:-30px; margin-right:-30px'><img src='data:image/png;base64,${imgBase64}'></p>												
+					</a></li>
+		</script>
+	</div>
+</div>
+
+
+
+
+<div id="GENERE-PAGE" data-role="page">
 	<div data-role="header" data-position="fixed">
 		<a href="#HOME-PAGE" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-home"></a>
 		<h1>Genere<br><font style="white-space:normal;font-size: .7em; font-weight:normal;"></font></h1>
@@ -154,9 +179,10 @@
 
 <div id="menu-panel" data-role="panel" data-position="right" data-display="overlay" data-theme="a">
 	<ul data-role="listview" data-inset="false" class="ui-nodisc-icon">
+		<li><a href="#CHANNELS-PAGE">Channels</a></li>
 		<li><a href="#GENERE-PAGE">Live Tv</a></li>
 		<li><a href="#ONDEMAND-GROUPS-PAGE">Ondemand Tv</a></li>
 	</ul>
 </div> 
-	 
+	
 </body></html>
