@@ -65,7 +65,7 @@ this.start = function() {
 //        utils.sleep(5000);
 //        skyLoader.getProgrammaDetail();
     
-    setLuckyChannelsLive();
+//    setLuckyChannelsLive();
         
 //    }, 5000);
     
@@ -105,7 +105,7 @@ this.start = function() {
 			player.exit();	
 		});
 		
-return;		  
+//return;		  
 		  var cec = new NodeCEC();
 
 		//start cec connection
