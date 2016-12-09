@@ -95,3 +95,16 @@ var OndemandSchema = new Schema({
 
 module.exports.ONDEMAND = mongoose.model('ONDEMAND', OndemandSchema);
 
+
+//-----------LUCKY_LIVE---------------------------------------------
+var LuckyLiveSchema = new Schema({
+  name: String,
+  logo: String,
+  title: String,
+  group: String,
+  file: String,
+  imgBase64: String
+},{toJSON:{virtuals: true}});
+
+module.exports.LUCKY_LIVE = mongoose.model('LUCKY_LIVE', LuckyLiveSchema);
+

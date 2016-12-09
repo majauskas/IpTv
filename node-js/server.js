@@ -51,11 +51,11 @@ this.start = function() {
 //        database.ONDEMAND.remove({}, function (err, data) {});
         
         
-//        setChannelsOndemandUrl();
+//        setLuckyChannelsOndemand();
 //        utils.sleep(1000);
 //        setChannels();
 //        utils.sleep(2000);
-//        setChannelsLiveUrl();
+//        setChannelsUrl();
 //        utils.sleep(5000);
 //        setPrograms();
 //        utils.sleep(5000);
@@ -65,7 +65,7 @@ this.start = function() {
 //        utils.sleep(5000);
 //        skyLoader.getProgrammaDetail();
     
-        
+    setLuckyChannelsLive();
         
 //    }, 5000);
     
@@ -105,7 +105,7 @@ this.start = function() {
 			player.exit();	
 		});
 		
-//return;		  
+return;		  
 		  var cec = new NodeCEC();
 
 		//start cec connection
@@ -193,8 +193,19 @@ app.get("/set-events", function (req, res) {
 });
 
 
-app.get("/get-channels", function (req, res) {
-	database.CHANNELS.find({file:{$ne:null}}).sort('name').exec(function (err, channels) {
+app.get("/get-channels-groups", function (req, res) {
+	database.LUCKY_LIVE.aggregate(
+//				{$match : {title : {$ne:""}}},
+				{$group : {_id : "$group", total : { $sum : 1 }}},
+				{$sort : {total : 1}}
+			).exec(function (err, channels) {
+		res.send(channels); 
+	});
+});
+
+app.get("/get-channels/:group", function (req, res) {
+	var group = req.params.group;
+	database.LUCKY_LIVE.find({group:group,file:{$ne:null}}).sort('name').exec(function (err, channels) {
 		 res.send(channels); 
 	});
 });
@@ -325,7 +336,7 @@ function setEvents() {
 }
 
 
-function setChannelsLiveUrl() {
+function setChannelsUrl() {
 	var res = request("GET","http://lucky.lts1.net:23000/get.php?username=mindagaus&password=x6COWBCJmH&type=m3u&output=mpegts");
 	var body = res.getBody();
 	var b = new Buffer(body, 'binary');
@@ -376,7 +387,7 @@ function setChannelsLiveUrl() {
 	
 }
 
-function setChannelsOndemandUrl() {
+function setLuckyChannelsOndemand() {
 	var res = request("GET","http://lucky.lts2.net:24000/get.php?username=mindagaus&password=wbrutd7DAp&type=m3u_plus&output=ts");
 	var body = res.getBody();
 	var b = new Buffer(body, 'binary');
@@ -422,12 +433,73 @@ function setChannelsOndemandUrl() {
 					console.log(title,"\t\t", entry,"\t\t", item.title);
 				}
 			  });
-	        console.log("-- setChannelsOndemandUrl End --", new Date());
+	        console.log("-- setLuckyChannelsOndemand End --", new Date());
 	        
 	    }
 	});
 	
 }
+
+function setLuckyChannelsLive() {
+	
+	var res = request("GET","http://lucky.lts1.net:23000/get.php?username=mindagaus&password=x6COWBCJmH&type=m3u_plus&output=ts");
+	var body = res.getBody();
+	var b = new Buffer(body, 'binary');
+	fs.writeFile("playlist-live.m3u", b, function(err) {
+	    if(err) {
+	        console.log(err);
+	    } else {
+	        console.log("The file was saved!");
+	        var M3U = parsers.M3U;
+	        var playlist = M3U.parse(fs.readFileSync("playlist-live.m3u", { encoding: "utf8" }));
+//	        console.log(playlist.length);
+	        var group = "";
+	        playlist.forEach(function(item) {
+//	        	console.log(item);
+	        	var title = item.title;
+	        	title = title
+	        				.replace("-1 ","")
+	        				.replace("tvg-name=\" ","tvg-name=\"")
+	        				.replace("tvg-logo=\" ","tvg-logo=\"")
+	        				.replace("tvg-id=\"\" ","\"")
+	        				.replace(/\" /g,"\", \"")
+	        				.replace(/tvg-/g,"")
+	        				.replace("group-","")
+	        				.replace(/=\"/g,"\":\"");//replace all
+//	        	console.log(title);
+	        	var entries = title.split(',');
+	        	var entry = ("{"+entries[1]+","+entries[2]+","+entries[3]+"}").replace(/=\":\"/g,"=\""); 
+	        	try {
+	        		entry = JSON.parse(entry); 
+	        		if (entry.name.indexOf("---") == 0){
+	        			group = entry.name;
+	        			return;
+	        		}
+	        		entry.group = group;
+	        		entry.imgBase64 = null;
+	        		try {
+	        			if(entry.logo && entry.logo !=""){
+	        				var url = entry.logo;
+	        				url = url.replace("i65.","oi65.")
+	        				var res = request("GET",url);
+			        		var body = res.getBody();
+			        		entry.imgBase64 = new Buffer(body, 'binary').toString('base64');	
+	        			}
+	        		} catch (e) {}
+//	        		console.log(entry);
+	        		database.LUCKY_LIVE.findOneAndUpdate({name: entry.name}, {imgBase64: entry.imgBase64, title: entry.title, file:item.file, logo: ""+entry.logo, group:group}, {upsert : true}, function (err, res) {});
+				} catch (e) {
+					console.log(title,"\t\t", entry,"\t\t", item.title);
+				}
+			  });
+	        console.log("-- setLuckyChannelsLive End --", new Date());
+	        
+	    }
+	});
+	
+}
+
+
 
 module.exports = new Server();
 
