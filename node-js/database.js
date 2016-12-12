@@ -4,9 +4,9 @@ var mongoose = require('mongoose');
 var os = require('os');
 
 //var url = "mongodb://ajauskas.homenet.org/home-system";
-//var url = "mongodb://192.168.7.94/test";
-var url = "mongodb://192.168.0.2/test";
-console.log("hostname",os.hostname().toLowerCase());
+var url = "mongodb://192.168.7.94/test";
+//var url = "mongodb://192.168.0.2/test";
+//console.log("hostname",os.hostname().toLowerCase());
 //if(os.hostname().toLowerCase() === "raspberrypi"){
 //	url = "mongodb://192.168.0.2/home-system-tv";
 //}

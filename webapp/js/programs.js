@@ -27,7 +27,9 @@ $(function() {
 		$("#PROGRAM-DETAIL-PAGE").attr("file", data.file);
 		$('#PROGRAM-DETAIL-PAGE #title').text(data.title);
 		$('#PROGRAM-DETAIL-PAGE #description').text(data.description);
+		$('#PROGRAM-DETAIL-PAGE #description2').text(data.description2);
 		$('#PROGRAM-DETAIL-PAGE #img').attr("src","data:image/png;base64,"+data.img_big);
+		
 		
 		
 		try {$("#PROGRAM-DETAIL-PAGE").page('destroy').page();} catch (e) {}

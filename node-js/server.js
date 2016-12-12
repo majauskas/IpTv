@@ -45,29 +45,13 @@ this.start = function() {
     var port = server.address().port;
     console.log('app listening at http://%s:%s', host, port);
   
-//    setTimeout(function() {
-//        database.CHANNELS.remove({}, function (err, data) {});
-//        database.PROGRAMS.remove({}, function (err, data) {});
-//        database.ONDEMAND.remove({}, function (err, data) {});
-        
-        
-//        setLuckyChannelsOndemand();
-//        utils.sleep(1000);
-//        setChannels();
-//        utils.sleep(2000);
-//        setChannelsUrl();
-//        utils.sleep(5000);
-//        setPrograms();
-//        utils.sleep(5000);
-//        setEvents();
-//        utils.sleep(5000);
-//        setEvents();
-//        utils.sleep(5000);
-//        skyLoader.getProgrammaDetail();
+    skyLoader.init();
     
-//    setLuckyChannelsLive();
-        
-//    }, 5000);
+    setTimeout(function() {
+//        database.ONDEMAND.remove({}, function (err, data) {});
+        setLuckyChannelsOndemand();
+        setLuckyChannelsLive();
+    }, 2000);
     
 
     
@@ -144,13 +128,13 @@ this.start = function() {
 		   }else if(data.name=="pause"){
 			   player.pause();
 		   }else if(data.name=="left"){
-			   player.command("left arrow");
+			   player.back30();
 		   }else if(data.name=="right"){
-			   player.command("right arrow");
+			   player.fwd30();
 		   }else if(data.name=="down"){
-			   player.command("down arrow");
+			   player.fwd600();
 		   }else if(data.name=="up"){
-			   player.command("up arrow");
+			   player.back600();
 		   }
 		   
 		});
@@ -263,129 +247,7 @@ app.get("/get-ondemand-programs/:genere", function (req, res) {
 };
 
 
-function setChannels() {	
-	var channels = skyLoader.getChanels();
-	channels.forEach(function(channel) {
-		var url = channel.logomsite;
-		var res = request("GET",url);
-		var body = res.getBody();
-		var channellogo = {};
-		var imgBase64 = new Buffer(body, 'binary').toString('base64');
-	    database.CHANNELS.findOneAndUpdate({id : channel.id}, {name : channel.name, number : channel.number, service : channel.service, imgBase64 : imgBase64}, {upsert : true}, function (err, res) {});
-	});
-	console.log("-- setChannels End --", new Date());
-}
 
-function setPrograms() {
-	
-	  database.CHANNELS.find({file:{$ne : null}}).exec(function (err, channels) {
-		  channels.forEach(function(channel) {
-			  var channelDetail = skyLoader.getChanelDetail(channel.id, new Date());
-			  channelDetail.plan.forEach(function(record) {
-				  if(record.id == -1) return;
-  	    		  var time = record.starttime.split(':');
-  	    		  var startDate = new Date();
-  	    		  startDate.setHours(time[0], time[1],0,0);
-
-  					 database.PROGRAMS.findOneAndUpdate({channel: channel.id, id : record.id}, {
-      	    			  name: channel.name,
-      	    			  file: channel.file,
-      	    			  number: channel.number,
-      	    			  service: channel.service,
-      	    			  channellogo: channel.imgBase64,
-      	    			  pid : record.pid, 
-      	    			  starttime : record.starttime,
-      	    			  startDate : startDate, 
-      	    			  dur : record.dur, 
-      	    			  title : record.title,
-      	    			  normalizedtitle : record.normalizedtitle,
-      	    			  desc : record.desc,
-      	    			  genre : record.genre,
-      	    			  subgenre : record.subgenre,
-      	    			  prima : record.prima
-      	    		  }, {upsert : true}, function (err, res) {});	   	  	    		 
-  	    	  });
-//	  	     });
-		  });
-		  console.log("-- setPrograms End --", new Date());
-	  });
-	  
-}
-
-function setEvents() {
-	var c = 0;
-//	database.PROGRAMS.find({img_big:null, img_small:{$ne:null}}).exec(function (err, programs) {
-	database.PROGRAMS.find({img_small:null,description:null},{ id: 1 }).exec(function (err, programs) {
-		  programs.forEach(function(program) {
-			 c++;
-			 console.log(c);
-			 var eventDescription = skyLoader.getEventDescription(program.id);
-			 if(eventDescription){
-				 database.PROGRAMS.findOneAndUpdate({id: program.id}, {
-					img_small: eventDescription.img_small,
-//					img_big: eventDescription.img_big,
-					img_small_url: eventDescription.img_small_url,
-//					img_big_url: eventDescription.img_big_url,
-	    		    description: eventDescription.description
-	    		  }, {upsert : true}, function (err, res) {});	
-			 }
-		  });
-		  console.log("-- setEvents End --", new Date());
-	});	
-	
-}
-
-
-function setChannelsUrl() {
-	var res = request("GET","http://lucky.lts1.net:23000/get.php?username=mindagaus&password=x6COWBCJmH&type=m3u&output=mpegts");
-	var body = res.getBody();
-	var b = new Buffer(body, 'binary');
-	fs.writeFile("playlist.m3u", b, function(err) {
-	    if(err) {
-	        console.log(err);
-	    } else {
-	        console.log("The file was saved!");
-	        var M3U = parsers.M3U;
-	        var playlist = M3U.parse(fs.readFileSync("playlist.m3u", { encoding: "utf8" }));
-	        console.log(playlist.length);
-	        playlist.forEach(function(item) {
-	        	var title = item.title.replace("-1,","");
-//	        	title = title.replace("Man-ga","MAN-GA");
-	        	title = title
-	        			.replace("Man-ga","MAN-GA")
-	        			.replace("Real Time","Real Time HD")
-	        			.replace("Cielo","Cielo HD")
-	        			.replace("Sky 3D","Sky 3D - Ch 150")
-	        			.replace("Sky Sport 24 HD","Sky Sport24 HD")
-	        			.replace("Sky Moto GP HD","Sky Sport MotoGP HD")
-	        			.replace("Eurosport 1 HD","Eurosport HD")
-	        			.replace("Sky Cinema 1 HD","Sky Cinema Uno HD")
-	        			.replace("SKY Cinema Family HD","Sky Cinema Family HD")
-	        			.replace("Prima Fila 1 LIVE","Primafila 1")
-	        			.replace("Sky CInema Classic HD","Sky Cinema Classics HD")
-	        			.replace("National Geographic HD","National Geo HD")
-	        			.replace("Discovery HD","Discovery Channel HD")
-	        			.replace("History HD","History Channel HD")
-	        			.replace("Dea Kids","DeAKids")
-	        			.replace("Sky TG 24 HD","Sky TG24 HD")
-	        			.replace("Nikeleodeon","Nickelodeon")
-	        			.replace("Sky Disney Channel","Disney Channel HD")
-	        			.replace("Dea Kids","DeA Junior")
-	        			.replace("Disney XD","Disney XD HD")
-	        			.replace("[MUSICA] MTV Rocks","MTV Rocks")
-	        			.replace("[MUSICA] MTV Hits","MTV Hits")
-	        			.replace("[MUSICA] MTV Music","MTV Music")
-	        			.replace("Crime Investigation HD","CI Crime+ Investigation HD");
-//	        	console.log(title);
-	        	database.CHANNELS.findOneAndUpdate({name: title}, {file: item.file}, {upsert : false}, function (err, res) {});
-				  
-			  });
-	        console.log("-- setChannelsLiveUrl End --", new Date());
-	        
-	    }
-	});
-	
-}
 
 function setLuckyChannelsOndemand() {
 	var res = request("GET","http://lucky.lts2.net:24000/get.php?username=mindagaus&password=wbrutd7DAp&type=m3u_plus&output=ts");
