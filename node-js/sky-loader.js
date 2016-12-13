@@ -57,34 +57,15 @@ getEventDescription = function (id, callback) {
 			var url2 = "http://guidatv.sky.it/app/guidatv/images"+event.thumbnail_url;	
 			try {
 				event.img_small_url = url2;
-				var res2 = request("GET",url2);
-				var body2 = res2.getBody();
-				var img_small = {};
-				if(body2){
-					var imgBase64 = new Buffer(body2, 'binary').toString('base64');
-					event.img_small = imgBase64;
-				}
+//				var res2 = request("GET",url2);
+//				var body2 = res2.getBody();
+//				var img_small = {};
+//				if(body2){
+//					var imgBase64 = new Buffer(body2, 'binary').toString('base64');
+//					event.img_small = imgBase64;
+//				}
 			} catch (e) {}
 
-//			var url3 = "http://guidatv.sky.it/app/guidatv/images"+event.thumbnail_url;	
-//			url3 = url3.replace("-small-","-visore-").replace("small.","visore.").replace("sma.","big.")
-//			.replace("1024","1280")
-//			.replace("-Small.","-Large.")
-//			;
-//			try {
-//				if(url3.indexOf("big.")>0){
-//					event.img_big_url = url3;
-//					var res3 = request("GET",url3);
-//					var body3 = res3.getBody();
-//					var img_big = {};
-//					if(body3){
-//						var imgBase64 = new Buffer(body3, 'binary').toString('base64');
-//						event.img_big = imgBase64;
-//					}
-//				}
-//			} catch (e) {
-//				console.log(id,url2,url3);
-//			}
 			
 			return event;
 		}else{
@@ -107,7 +88,7 @@ getEventDescription = function (id, callback) {
 getProgrammaDetail = function (callback) {
 		var startDate = new Date();
 		console.log("-- getProgrammaDetail Start --");
-		database.PROGRAMS.find({description2:null,genre:"film"},{ id: 1,genre: 1,subgenre: 1,normalizedtitle: 1,pid: 1 }).exec(function (err, programs) {
+		database.PROGRAMS.find({genre:"film"},{ id: 1,genre: 1,subgenre: 1,normalizedtitle: 1,pid: 1 }).exec(function (err, programs) {
 				console.log(programs.length);
 				  programs.forEach(function(program) {
 					  var url = 'http://guidatv.sky.it/guidatv/programma/'+program.genre+'/'+program.subgenre+'/'+program.normalizedtitle+'_'+program.pid+'.shtml?eventid='+program.id;
@@ -138,58 +119,26 @@ getProgrammaDetail = function (callback) {
 						        parsedHTML('div[class="content on"] div[class="testo"] i').html("");
 						        var description2 = parsedHTML('div[class="content on"] div[class="testo"]').text();
 						        
-//						        parsedHTML('.info1 strong').html("");
-//						        parsedHTML('.info1 br').html("#");
-//						        var info1 = parsedHTML('.info1').text();
-//						        info1 = info1.replace(/ : /g,"").replace(/ # /g,"").replace(/ /g,"");
-//						        info1 = info1.split("#")
-//						        var uscita = info1[0];
-//						        var nazione = info1[1];
-//						        var audio = info1[4];
-//						        var age = info1[5];
-//			
-//						        parsedHTML('.info2 strong').html("");
-//						        parsedHTML('.info2 br').html("#");
-//						        var info2 = parsedHTML('.info2').text();
-//						        info2 = info2.replace(/: /g,"");
-//						        info2 = info2.split("#")
-//						        var regia = (info2[0]+"").trim();
-//						        var cast = (info2[1]+"").trim();
-						        
-						        var img_big = null;
-						        if(img_big_url){
-									try {
-										var res3 = request("GET",img_big_url);
-										var body3 = res3.getBody();
-										if(body3){
-											img_big = new Buffer(body3, 'binary').toString('base64');
-										}
-									} catch (e) {
-										 console.log("Error img_big: ", program.id,url,img_big_url);
-									}	
-						        }else{
-						        	img_big_url = null;
-						        }
-						        
-//						        console.log("updating: ", program.id,{
-//						        	img_big_url: img_big_url,
-//									img_big: img_big,
-//					    		    description2: description2
-//					    		  } );
+//						        var img_big = null;
+//						        if(img_big_url){
+//									try {
+//										var res3 = request("GET",img_big_url);
+//										var body3 = res3.getBody();
+//										if(body3){
+//											img_big = new Buffer(body3, 'binary').toString('base64');
+//										}
+//									} catch (e) {
+//										 console.log("Error img_big: ", program.id,url,img_big_url);
+//									}	
+//						        }else{
+//						        	img_big_url = null;
+//						        }
 						        database.PROGRAMS.findOneAndUpdate({id: program.id}, {
 						        	img_big_url: img_big_url,
-									img_big: img_big,
+//									img_big: img_big,
 					    		    description2: description2
-//					    		    uscita: uscita,
-//					    		    nazione: nazione,
-//					    		    audio: audio,
-//					    		    age: age,
-//					    		    regia: regia,
-//					    		    cast: cast
 					    		  }, {upsert : false}, function (err, res) {
-//					    			  console.log("OK:",err, res);
 					    		  });	
-//						        console.log("OK2: ", program.id,url);
 								
 							}
 						} catch (e) {
@@ -271,7 +220,7 @@ getProgrammaDetail = function (callback) {
 				 var eventDescription = getEventDescription(program.id);
 				 if(eventDescription){
 					 database.PROGRAMS.findOneAndUpdate({id: program.id}, {
-						img_small: eventDescription.img_small,
+//						img_small: eventDescription.img_small,
 						img_small_url: eventDescription.img_small_url,
 		    		    description: eventDescription.description
 		    		  }, {upsert : true}, function (err, res) {});	
@@ -329,6 +278,301 @@ getProgrammaDetail = function (callback) {
 		
 	}
 	
+	
+	
+	
+	
+	
+	
+getProgrammaDetailFromFilmtv = function (callback) {
+		var startDate = new Date();
+		console.log("-- getProgrammaDetailFromFilmtv Start --");
+		database.PROGRAMS.find({genre:"film"},{ id: 1,genre: 1,subgenre: 1,normalizedtitle: 1,title: 1 }).exec(function (err, programs) {
+				  programs.forEach(function(program) {
+					  var url = 'http://www.filmtv.it/cerca/?q='+program.title;
+					  console.log(url);
+					  try {
+							var res = request("GET",url);
+							var body = res.getBody();
+							if(body){
+						        var parsedHTML = cheerio.load(body, {normalizeWhitespace: true});
+						        
+						        var href = parsedHTML('.items-list article .pic').attr('href');
+						        var img_small_url = parsedHTML('.items-list img').attr('src');
+						        var description2 = null;
+						        var img_big_url = null;
+						        try {
+									var html = cheerio.load(request("GET","http://www.filmtv.it"+href).getBody(), {normalizeWhitespace: true});
+									description2 = html('.scheda-desc p').html();
+									img_big_url = html('.cover img').attr('src');
+									console.log(img_big_url);
+								} catch (e) {
+									console.error("Error on scheda html",e)
+								}
+						        var cast = [];
+						        var regia = {};
+						        try {
+						        	var cast_url = "http://www.filmtv.it"+href+"cast/";
+									var castHtml = cheerio.load(request("GET",cast_url).getBody(), {normalizeWhitespace: true});
+									regia.name = castHtml('article[class="membro-cast regia"] img').attr('alt');
+									regia.img = castHtml('article[class="membro-cast regia"] img').attr('src');
+							        castHtml('section[class="cast"]').find('article[class="membro-cast"]').each(function(i,membro) {
+							        	var img = castHtml(this).find("img");
+							        	cast.push({name:img.attr('alt'),img:img.attr('src')});
+							        });
+								} catch (e) {
+									console.error("Error on cast html",e)
+								}
+						        
+								
+								 database.PROGRAMS.findOneAndUpdate({id: program.id}, {
+									    img_small_url: img_small_url,
+										img_big_url: img_big_url,
+						    		    description2: description2,
+						    		    regia: regia,
+						    		    cast: cast
+						    		  }, {upsert : false}, function (err, res) {});
+
+								
+							}
+						} catch (e) {
+							 console.log("error main:",program.id,url);
+						}
+				  });
+				  var diff = moment(new Date()).diff(startDate, 'seconds');
+				  console.log("-- getProgrammaDetailFromFilmtv End --", diff);
+				  callback();
+		});	
+
+}	
+	
+	
+	
+getFilmTrailer = function (callback) {
+	var startDate = new Date();
+	console.log("-- getFilmTrailer Start --");
+	database.PROGRAMS.find({genre:"film"},{ id: 1,title: 1 }).exec(function (err, programs) {
+		  programs.forEach(function(program) {
+			  var url = 'https://www.youtube.com/results?search_query=trailer '+program.title;
+			  try {
+//				  https://youtu.be/BCFXZTVrCYE
+		        var parsedHTML = cheerio.load(request("GET",url).getBody(), {normalizeWhitespace: true});
+		        var trailer_url = "https://www.youtube.com"+parsedHTML('.yt-lockup-title a').attr('href');
+		        console.log(program.id,url, trailer_url);
+				 database.PROGRAMS.findOneAndUpdate({id: program.id}, {
+					 	trailer_url: trailer_url
+		    	 }, {upsert : false}, function (err, res) {});
+				 
+				} catch (e) {
+					 console.log("error trailer:",program.id,url,e);
+				}
+		  });
+		  var diff = moment(new Date()).diff(startDate, 'seconds');
+		  console.log("-- getFilmTrailer End --", diff);
+		  callback();
+	});	
+
+}	
+
+
+getOndemandTrailer = function (callback) {
+	var startDate = new Date();
+	console.log("-- getOndemandTrailer Start --");
+	database.ONDEMAND.find({title:"===== PRIMAFILA===="},{ name: 1}).exec(function (err, programs) {
+		  programs.forEach(function(program) {
+			  
+			  var name = program.name;
+			  
+			  name = name.replace("PF1 ","").replace("PF2 ","").replace("PF3 ","").replace("PF4 ","").replace("PF5 ","").replace("PF6 ","")
+			  .replace("PF7 ","").replace("PF8 ","").replace("PF9 ","").replace("PF10 ","").replace("PF11 ","").replace("PF12 ","").replace("PF13 ","")
+			  .replace("PF14 ","").replace("PF15 ","").replace("PF16 ","").replace("PF17 ","").replace("PF18 ","").replace("PF19 ","")
+			  .replace(/-/g,"");
+			  console.log(name);
+			  var url = 'https://www.youtube.com/results?search_query=trailer '+name;
+			  try {
+//				  https://youtu.be/BCFXZTVrCYE
+		        var parsedHTML = cheerio.load(request("GET",url).getBody('utf8'), {normalizeWhitespace: true});
+		        var trailer_url = "https://www.youtube.com"+parsedHTML('.yt-lockup-title a').attr('href');
+		        console.log(program.id,url, trailer_url);
+				 database.ONDEMAND.findOneAndUpdate({name: program.name}, {
+					 	trailer_url: trailer_url
+		    	 }, {upsert : false}, function (err, res) {});
+				 
+				} catch (e) {
+					 console.log("error trailer:",program.name,url,e);
+				}
+		  });
+		  var diff = moment(new Date()).diff(startDate, 'seconds');
+		  console.log("-- getOndemandTrailer End --", diff);
+		  callback();
+	});	
+
+}
+
+
+getOndemandDescription = function (callback) {
+	var startDate = new Date();
+	console.log("-- getOndemandDescription Start --");
+	database.ONDEMAND.find({title:"===== PRIMAFILA===="},{ name: 1}).exec(function (err, programs) {
+		  programs.forEach(function(program) {
+			  
+			  var name = program.name;
+			  name = name.replace("PF1 ","").replace("PF2 ","").replace("PF3 ","").replace("PF4 ","").replace("PF5 ","").replace("PF6 ","")
+			  .replace("PF7 ","").replace("PF8 ","").replace("PF9 ","").replace("PF10 ","").replace("PF11 ","").replace("PF12 ","").replace("PF13 ","")
+			  .replace("PF14 ","").replace("PF15 ","").replace("PF16 ","").replace("PF17 ","").replace("PF18 ","").replace("PF19 ","")
+			  .replace(/-/g,"");
+			  console.log(name);
+			  
+			  var url = 'http://www.filmtv.it/cerca/?q='+name;
+			  console.log(url);
+			  try {
+				        var parsedHTML = cheerio.load(request("GET",url).getBody(), {normalizeWhitespace: true});
+				        
+				        var href = parsedHTML('.items-list article .pic').attr('href');
+				        var img_small_url = parsedHTML('.items-list img').attr('src');
+				        var description2 = null;
+				        var img_big_url = null;
+				        try {
+							var html = cheerio.load(request("GET","http://www.filmtv.it"+href).getBody(), {normalizeWhitespace: true});
+							description2 = html('.scheda-desc p').html();
+							img_big_url = html('.cover img').attr('src');
+							console.log(img_big_url);
+						} catch (e) {
+							console.error("Error on scheda html",e)
+						}
+				        var cast = [];
+				        var regia = {};
+				        try {
+				        	var cast_url = "http://www.filmtv.it"+href+"cast/";
+							var castHtml = cheerio.load(request("GET",cast_url).getBody(), {normalizeWhitespace: true});
+							regia.name = castHtml('article[class="membro-cast regia"] img').attr('alt');
+							regia.img = castHtml('article[class="membro-cast regia"] img').attr('src');
+					        castHtml('section[class="cast"]').find('article[class="membro-cast"]').each(function(i,membro) {
+					        	var img = castHtml(this).find("img");
+					        	cast.push({name:img.attr('alt'),img:img.attr('src')});
+					        });
+						} catch (e) {
+							console.error("Error on cast html",e)
+						}
+						database.ONDEMAND.findOneAndUpdate({name: program.name}, {
+							img_small_url: img_small_url,
+							img_big_url: img_big_url,
+			    		    description: description,
+			    		    regia: regia,
+			    		    cast: cast
+						}, {upsert : false}, function (err, res) {});
+
+						
+				} catch (e) {
+					 console.log("error getOndemandDescription:",program.id,url);
+				}
+			  
+			  
+//			  var url = 'https://www.youtube.com/results?search_query=trailer '+name;
+//			  try {
+////				  https://youtu.be/BCFXZTVrCYE
+//		        var parsedHTML = cheerio.load(request("GET",url).getBody('utf8'), {normalizeWhitespace: true});
+//		        var trailer_url = "https://www.youtube.com"+parsedHTML('.yt-lockup-title a').attr('href');
+//		        console.log(program.id,url, trailer_url);
+//				 database.ONDEMAND.findOneAndUpdate({name: program.name}, {
+//					 	trailer_url: trailer_url
+//		    	 }, {upsert : false}, function (err, res) {});
+//				 
+//				} catch (e) {
+//					 console.log("error trailer:",program.name,url,e);
+//				}
+		  });
+		  var diff = moment(new Date()).diff(startDate, 'seconds');
+		  console.log("-- getOndemandDescription End --", diff);
+		  callback();
+	});	
+
+}
+
+
+
+
+
+
+
+getProgrammaSky = function (callback) {
+	var startDate = new Date();
+	console.log("-- getProgrammaSky Start --");
+	
+	  var url = 'http://www.filmtv.it/programmi-tv/film-serie-tv/oggi/mattina/sky/';
+	  try {
+		  	var html = cheerio.load(request("GET",url).getBody('utf8'), {normalizeWhitespace: true});
+		  	html('.item-scheda-film').each(function(i,membro) {
+		  		var obj = html(this);
+		  		
+		  		var href = obj.find("header a").attr('href');
+		  		var title = obj.find("header h1").text();
+		  		
+//		  		console.log(obj.html());
+		  		console.log(href, title);
+//	        	
+//	        	cast.push({name:img.attr('alt'),img:img.attr('src')});
+	        });
+		  	
+//	        var href = parsedHTML('.items-list article .pic').attr('href');
+//	        var img_small_url = parsedHTML('.items-list img').attr('src');
+//	
+//	        
+//	        var description2 = null;
+//	        var img_big_url = null;
+//	        try {
+//				var html = cheerio.load(request("GET","http://www.filmtv.it"+href).getBody(), {normalizeWhitespace: true});
+//				description2 = html('.scheda-desc p').html();
+//				img_big_url = html('.cover img').attr('src');
+//				console.log(img_big_url);
+//			} catch (e) {
+//				console.error("Error on scheda html",e)
+//			}
+//	        
+//	        
+//	        
+//	        
+//	        var cast = [];
+//	        var regia = {};
+//	        try {
+//	        	var cast_url = "http://www.filmtv.it"+href+"cast/";
+//				var castHtml = cheerio.load(request("GET",cast_url).getBody(), {normalizeWhitespace: true});
+//				regia.name = castHtml('article[class="membro-cast regia"] img').attr('alt');
+//				regia.img = castHtml('article[class="membro-cast regia"] img').attr('src');
+//		        castHtml('section[class="cast"]').find('article[class="membro-cast"]').each(function(i,membro) {
+//		        	var img = castHtml(this).find("img");
+//		        	cast.push({name:img.attr('alt'),img:img.attr('src')});
+//		        });
+//			} catch (e) {
+//				console.error("Error on cast html",e)
+//			}
+//	        
+//			
+//			 database.PROGRAMS.findOneAndUpdate({id: program.id}, {
+//				    img_small_url: img_small_url,
+//					img_big_url: img_big_url,
+//	    		    description2: description2,
+//	    		    regia: regia,
+//	    		    cast: cast
+//	    		  }, {upsert : false}, function (err, res) {});
+//	
+			
+		} catch (e) {
+			 console.log("error get programma Sky:");
+		}
+	  var diff = moment(new Date()).diff(startDate, 'seconds');
+	  console.log("-- getProgrammaSky End --", diff);
+	  callback();
+
+}
+
+
+
+
+
+
+	
+	
 	module.exports.init = function () {
 		
 		database.CHANNELS.findOne({file:{$ne : null}}).exec(function (err, channels) {
@@ -348,9 +592,15 @@ getProgrammaDetail = function (callback) {
 		
 		
 		
-		
+//		getProgrammaDetailFromFilmtv(function() {});
+//		getProgrammaSky(function() {});
+//		getFilmTrailer(function() {});
 		
 //	  setTimeout(startSync, 1000);
+		
+//		getOndemandTrailer(function() {});
+//		getOndemandDescription(function() {});
+		
 	  
 	}
 	
@@ -368,9 +618,13 @@ getProgrammaDetail = function (callback) {
 	    	  setEvents(function() {
 	    		  setEvents(function() {
 		    		  getProgrammaDetail(function() {
-				    	  
-		    			  var diff = moment(new Date()).diff(startDate, 'seconds');
-						  console.log("-- sync finished --", diff);
+		    			  getProgrammaDetailFromFilmtv(function() {
+		    				  getFilmTrailer(function() {
+				    			  var diff = moment(new Date()).diff(startDate, 'seconds');
+								  console.log("-- sync finished --", diff);
+						      }); 
+					      }); 
+		    			 
 				      });
 	    		  });
 		      });

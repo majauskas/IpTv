@@ -48,7 +48,8 @@ this.start = function() {
     skyLoader.init();
     
     setTimeout(function() {
-//        database.ONDEMAND.remove({}, function (err, data) {});
+        database.ONDEMAND.remove({}, function (err, data) {});
+        database.LUCKY_LIVE.remove({}, function (err, data) {});
         setLuckyChannelsOndemand();
         setLuckyChannelsLive();
     }, 2000);
@@ -88,8 +89,13 @@ this.start = function() {
 			console.log("------- socket-mobile-stop ----------------");
 			player.exit();	
 		});
+	
 		
-//return;		  
+		console.log("hostname",os.hostname().toLowerCase());
+		if(os.hostname().toLowerCase() === "minde"){
+			return;
+		}
+		
 		  var cec = new NodeCEC();
 
 		//start cec connection
@@ -250,6 +256,7 @@ app.get("/get-ondemand-programs/:genere", function (req, res) {
 
 
 function setLuckyChannelsOndemand() {
+	console.log("-- setLuckyChannelsOndemand Start --");
 	var res = request("GET","http://lucky.lts2.net:24000/get.php?username=mindagaus&password=wbrutd7DAp&type=m3u_plus&output=ts");
 	var body = res.getBody();
 	var b = new Buffer(body, 'binary');
@@ -257,10 +264,8 @@ function setLuckyChannelsOndemand() {
 	    if(err) {
 	        console.log(err);
 	    } else {
-	        console.log("The file was saved!");
 	        var M3U = parsers.M3U;
 	        var playlist = M3U.parse(fs.readFileSync("playlist-ondemand.m3u", { encoding: "utf8" }));
-//	        console.log(playlist.length);
 	        var group = "";
 	        playlist.forEach(function(item) {
 	        	 
@@ -271,39 +276,29 @@ function setLuckyChannelsOndemand() {
 	        				.replace("tvg-id=\"\" ","\"")
 	        				.replace(/\" /g,"\", \"")
 	        				.replace(/tvg-/g,"")
-//	        				.replace("tvg-","")
 	        				.replace("group-","")
 	        				.replace(/=\"/g,"\":\"");//replace all
-//	        	console.log(title);
 	        	var entries = title.split(',');
-//	        	console.log(entries);
 	        	var entry = ("{"+entries[0]+","+entries[1]+","+entries[2]+"}").replace(/=\":\"/g,"=\""); 
-//	        	console.log(entry);
 	        	try {
 	        		entry = JSON.parse(entry); 
 	        		if (entry.name.indexOf("==") == 0){
 	        			group = entry.name;
 	        			return;
 	        		}
-//	        		tvg-name="==
-//	        		console.log({name: entry.name, logo: entry.logo, title: entry.title, file:item.file});
-	        		database.ONDEMAND.findOneAndUpdate({name: entry.name}, {title: entry.title, file:item.file, logo: ""+entry.logo, group:group}, {upsert : true}, function (err, res) {
-//	        			console.log(err, res);
-	        			
-	        		});
+	        		database.ONDEMAND.findOneAndUpdate({name: entry.name}, {title: entry.title, file:item.file, logo: ""+entry.logo, group:group}, {upsert : true}, function (err, res) {});
 				} catch (e) {
 					console.log(title,"\t\t", entry,"\t\t", item.title);
 				}
 			  });
-	        console.log("-- setLuckyChannelsOndemand End --", new Date());
-	        
 	    }
 	});
+	console.log("-- setLuckyChannelsOndemand End --");
 	
 }
 
 function setLuckyChannelsLive() {
-	
+	console.log("-- setLuckyChannelsLive Start --");
 	var res = request("GET","http://lucky.lts1.net:23000/get.php?username=mindagaus&password=x6COWBCJmH&type=m3u_plus&output=ts");
 	var body = res.getBody();
 	var b = new Buffer(body, 'binary');
@@ -314,10 +309,8 @@ function setLuckyChannelsLive() {
 	        console.log("The file was saved!");
 	        var M3U = parsers.M3U;
 	        var playlist = M3U.parse(fs.readFileSync("playlist-live.m3u", { encoding: "utf8" }));
-//	        console.log(playlist.length);
 	        var group = "";
 	        playlist.forEach(function(item) {
-//	        	console.log(item);
 	        	var title = item.title;
 	        	title = title
 	        				.replace("-1 ","")
@@ -328,7 +321,6 @@ function setLuckyChannelsLive() {
 	        				.replace(/tvg-/g,"")
 	        				.replace("group-","")
 	        				.replace(/=\"/g,"\":\"");//replace all
-//	        	console.log(title);
 	        	var entries = title.split(',');
 	        	var entry = ("{"+entries[1]+","+entries[2]+","+entries[3]+"}").replace(/=\":\"/g,"=\""); 
 	        	try {
@@ -348,7 +340,6 @@ function setLuckyChannelsLive() {
 			        		entry.imgBase64 = new Buffer(body, 'binary').toString('base64');	
 	        			}
 	        		} catch (e) {}
-//	        		console.log(entry);
 	        		database.LUCKY_LIVE.findOneAndUpdate({name: entry.name}, {imgBase64: entry.imgBase64, title: entry.title, file:item.file, logo: ""+entry.logo, group:group}, {upsert : true}, function (err, res) {});
 				} catch (e) {
 					console.log(title,"\t\t", entry,"\t\t", item.title);
@@ -358,6 +349,7 @@ function setLuckyChannelsLive() {
 	        
 	    }
 	});
+	console.log("-- setLuckyChannelsLive End --");
 	
 }
 

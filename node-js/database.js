@@ -77,8 +77,12 @@ var ProgramsSchema = new Schema({
   nazione: String,
   audio: String,
   age: String,
-  regia: String,
-  cast: String
+  regia: {
+		name: String,
+		img: String
+  },
+  cast : [],//{name,img}
+  trailer_url: String
 },{toJSON:{virtuals: true}});
 
 module.exports.PROGRAMS = mongoose.model('PROGRAMS', ProgramsSchema);
@@ -90,7 +94,16 @@ var OndemandSchema = new Schema({
   logo: String,
   title: String,
   group: String,
-  file: String
+  file: String,
+  trailer_url: String,
+  regia: {
+		name: String,
+		img: String
+  },
+  cast : [],//{name,img}
+  description: String,
+  img_small_url: String,
+  img_big_url: String
 },{toJSON:{virtuals: true}});
 
 module.exports.ONDEMAND = mongoose.model('ONDEMAND', OndemandSchema);
