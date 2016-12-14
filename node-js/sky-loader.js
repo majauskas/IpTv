@@ -584,7 +584,7 @@ getProgrammaSky = function (callback) {
 				},null, true, null, {});
 			}else{
 				console.log('sync now');
-				setTimeout(startSync, 1000);
+				setTimeout(startSync, 30000);
 			}
 			
 		});
@@ -610,7 +610,6 @@ getProgrammaSky = function (callback) {
 		  var startDate = new Date();
 	      database.CHANNELS.remove({}, function (err, data) {});
 	      database.PROGRAMS.remove({}, function (err, data) {});
-//	      database.ONDEMAND.remove({}, function (err, data) {});
 	      
 	      setChannels();
 	      setChannelsUrl();
