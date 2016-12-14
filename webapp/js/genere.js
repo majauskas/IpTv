@@ -24,7 +24,6 @@ $(function() {
 	$("#listview-genere").on("click", "li", function (event) {
 		
 		var genere = $(this).attr("genere");
-		console.log(genere);
 		$("#PROGRAMS-PAGE").attr("genere", genere);
 		try {$("#PROGRAMS-PAGE").page('destroy').page();} catch (e) {}
 		$.mobile.changePage("#PROGRAMS-PAGE");

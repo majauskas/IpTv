@@ -126,7 +126,7 @@
 	<div data-role="main" class="ui-content" style="text-align: center; width: auto;" data-iscroll>        
 		<ul data-role="listview" data-inset="false" id="listview-programs" class="ui-nodisc-icon"></ul>	
 		<script id="template-programs" type="text/x-jquery-tmpl">
-					<li class="ui-nodisc-icon" id='${id}' data='${target}'>					
+					<li class="ui-nodisc-icon" id='${id}' file='${file}' title='${title}' description='${description}' img_big_url='${img_big_url}'  trailer_url='${trailer_url}' >					
 					<a>
 						{{if (img_small_url)}}<img style="width: 100%; height: 100%" src='${img_small_url}'>{{/if}}
 						<p><font style="white-space:normal;font-weight:bold;">${title}</font></p>
@@ -149,11 +149,11 @@
 		<p id="title" style="text-shadow: none; color: white; text-align: center; font-weight:bold;"></p>
 		<hr> 
 		<img style="width: 100%;" id="img"/>
-		<a id="trailer" href="#" target="_blank" data-role="button" data-icon="youtube">Trailer</a>   
+		<a id="trailer" target="_blank" data-role="button" data-icon="youtube">Trailer</a>   
 		<hr>   
 		<p id="description" style="text-shadow: none; color: white"></p>
 		<br>   
-		<p id="description2" style="text-shadow: none; color: white"></p>
+<!-- 		<p id="description2" style="text-shadow: none; color: white"></p> -->
 	</div>
 	 
 </div>

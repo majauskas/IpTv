@@ -584,7 +584,7 @@ getProgrammaSky = function (callback) {
 				},null, true, null, {});
 			}else{
 				console.log('sync now');
-				setTimeout(startSync, 30000);
+				setTimeout(startSync, 1000);
 			}
 			
 		});

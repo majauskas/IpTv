@@ -43,6 +43,9 @@ module.exports.exit = function () {
 	exec("kill -9 $(ps aux | grep 'omxplayer' | awk '{print $2}')");
 	console.log("kill omxplayer ok");
 }
+module.exports.youtubePlay = function (file) { 
+	exec("omxplayer `youtube-dl -g "+file+"`");
+}
 module.exports.play = function () { omxProcess.stdin.write('p'); };
 module.exports.pause = function ()  { omxProcess.stdin.write('p'); };
 module.exports.volUp = function ()  { omxProcess.stdin.write('+'); };
