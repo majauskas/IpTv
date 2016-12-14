@@ -213,7 +213,7 @@ app.get("/get-genere", function (req, res) {
 	var startDate = new Date();
 	startDate.setHours(startDate.getHours() - 1);
 	var endDate = new Date();
-	endDate.setHours(endDate.getHours() +1);	
+	endDate.setHours(endDate.getHours() +5);	
 	database.PROGRAMS.aggregate(
 				{$match : {startDate : {$gte:startDate, $lt:endDate}}},
 				{$group : {_id : "$genre", total : { $sum : 1 }}},
