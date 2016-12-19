@@ -355,32 +355,20 @@ function setLuckyChannelsOndemand(callBack) {
 
 	module.exports.init = function () {
 		
-//		database.CHANNELS.findOne({file:{$ne : null}}).exec(function (err, channels) {
-//			if(channels){
-//				console.log('sync later');
-//				new CronJob("00 01 06 * * *", function(){
-//					console.log('job sync at ', new Date());
-//					startSync();
-//				},null, true, null, {});
-//			}else{
-//				console.log('sync now');
-//				setTimeout(startSync, 1000);
-//			}
-//			
-//		});
-		
-		
-		
-		
-//		getProgrammaDetailFromFilmtv(function() {});
-//		getProgrammaSky(function() {});
-//		getFilmTrailer(function() {});
-		
-//	  setTimeout(startSync, 1000);
-		
-//		getOndemandTrailer(function() {});
-//		getOndemandDescription(function() {});
-		
+		database.ONDEMAND.findOne().exec(function (err, channels) {
+			if(channels){
+				console.log('sync later');
+				new CronJob("00 01 05 * * *", function(){
+					console.log('job sync at ', new Date());
+					startSync();
+				},null, true, null, {});
+			}else{
+				console.log('sync now');
+				setTimeout(startSync, 1000);
+			}
+			
+		});
+
 		
 		
 		 startSync();
