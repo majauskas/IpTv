@@ -368,10 +368,7 @@ function setLuckyChannelsOndemand(callBack) {
 			}
 			
 		});
-
 		
-		
-		 startSync();
 	}
 	
 
