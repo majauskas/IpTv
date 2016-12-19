@@ -5,7 +5,9 @@ var os = require('os');
 
 //var url = "mongodb://ajauskas.homenet.org/home-system";
 //var url = "mongodb://192.168.7.94/test";
-var url = "mongodb://192.168.0.2/test";
+//var url = "mongodb://ajauskas.dyndns.org/test";
+//var url = "mongodb://192.168.0.2/test";
+var url = "mongodb://localhost/test";
 //console.log("hostname",os.hostname().toLowerCase());
 //if(os.hostname().toLowerCase() === "raspberrypi"){
 //	url = "mongodb://192.168.0.2/home-system-tv";
@@ -103,7 +105,8 @@ var OndemandSchema = new Schema({
   cast : [],//{name,img}
   description: String,
   img_small_url: String,
-  img_big_url: String
+  img_big_url: String,
+  thumbnail_url: String,
 },{toJSON:{virtuals: true}});
 
 module.exports.ONDEMAND = mongoose.model('ONDEMAND', OndemandSchema);

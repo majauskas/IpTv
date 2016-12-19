@@ -1,38 +1,22 @@
 #EXTM3U
-#EXTINF:-1 tvg-ID="" tvg-name="---- < LUCKY ITALIA > ---" tvg-logo="http://i65.tinypic.com/5nj138.jpg" group-title="",---- < LUCKY ITALIA > ---
+#EXTINF:-1 tvg-ID="" tvg-name="---- < LUCKY ITALIA > ---" tvg-logo="http://i65.tinypic.com/5nj138.jpg" group-title="Tivusat",---- < LUCKY ITALIA > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/13132.ts
 #EXTINF:-1 tvg-ID="RaiUno.it" tvg-name="Rai 1 HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_1072_3EE_1_C00000_0_0_0.png" group-title="Tivusat",Rai 1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2399.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Rai 1 HD +1" tvg-logo="http://epgstar.ovh/picon/1_0_1_1072_3EE_1_C00000_0_0_0.png" group-title="+1",Rai 1 HD +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18683.ts
-#EXTINF:-1 tvg-ID="RAIDue.it" tvg-name="Rai 2 HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_1073_3EE_1_C00000_0_0_0.png" group-title="Tivusat",Rai 2 HD
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2400.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Rai 2 HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_1_1073_3EE_1_C00000_0_0_0.png" group-title="+1",Rai 2 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18684.ts
+#EXTINF:-1 tvg-ID="" tvg-name="Rai 2 HD" tvg-logo="" group-title="Tivusat",Rai 2 HD
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22929.ts
 #EXTINF:-1 tvg-ID="RAITre.it" tvg-name="Rai 3 HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_1074_3EE_1_C00000_0_0_0.png" group-title="Tivusat",Rai 3 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2401.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Rai 3 HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_1_1074_3EE_1_C00000_0_0_0.png" group-title="+1",Rai 3 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18685.ts
 #EXTINF:-1 tvg-ID="Rete4.it" tvg-name="Rete 4 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Rete-4_o.jpg" group-title="Tivusat",Rete 4 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3813.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Rete 4 HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Rete-4_o.jpg" group-title="+1",Rete 4 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18686.ts
 #EXTINF:-1 tvg-ID="Canale5.it" tvg-name="Canale 5 HD" tvg-logo="http://epgstar.ovh/picon/1_0_19_1FA9_32A_110_EEEE0000_0_0_0.png" group-title="Tivusat",Canale 5 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3811.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Canale 5 HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_19_1FA9_32A_110_EEEE0000_0_0_0.png" group-title="+1",Canale 5 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18715.ts
 #EXTINF:-1 tvg-ID="Italia1.it" tvg-name="Italia 1 HD" tvg-logo="http://epgstar.ovh/picon/1_0_19_1FAA_32A_110_EEEE0000_0_0_0.png" group-title="Tivusat",Italia 1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3812.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Italia 1 HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_19_1FAA_32A_110_EEEE0000_0_0_0.png" group-title="+1",Italia 1 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18687.ts
 #EXTINF:-1 tvg-ID="La7.it" tvg-name="La 7 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/La-7_o.jpg" group-title="Tivusat",La 7 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3814.ts
-#EXTINF:-1 tvg-ID="" tvg-name="La 7 HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/La-7_o.jpg" group-title="+1",La 7 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18688.ts
 #EXTINF:-1 tvg-ID="MTV.it" tvg-name="MTV Tv8" tvg-logo="http://nst.sky.it/etc/designs/tv8/static/images/mtv/logo_big.png" group-title="Tivusat",MTV Tv8
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2435.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Mtv TV8 HD  +1" tvg-logo="http://nst.sky.it/etc/designs/tv8/static/images/mtv/logo_big.png" group-title="+1",Mtv TV8 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18689.ts
 #EXTINF:-1 tvg-ID="" tvg-name="---- < SKY CINEMA > ---" tvg-logo="http://i65.tinypic.com/5nj138.jpg" group-title="",---- < SKY CINEMA > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/1032.ts
 #EXTINF:-1 tvg-ID="SKYCinema1.it" tvg-name="Sky Cinema 1 HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_2B5D_19C8_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema 1 HD
@@ -41,12 +25,8 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3806.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22347.ts
 #EXTINF:-1 tvg-ID="SKYCinema+24.it" tvg-name="Sky Cinema +24 HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_2B_2_85_C00000_0_0_0.png" group-title="Sky Cinema",Sky Cinema +24 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/4148.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Cinema  24 HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_1_2B_2_85_C00000_0_0_0.png" group-title="Sky Cinema",Sky Cinema  24 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18690.ts
 #EXTINF:-1 tvg-ID="CinemaHits.it" tvg-name="Sky Cinema Hits HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_2DCC_1A2C_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Hits HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3820.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Cinema Hits HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_1_2DCC_1A2C_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Hits HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18691.ts
 #EXTINF:-1 tvg-ID="CinemaFamily.it" tvg-name="SKY Cinema Family HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_2B61_19C8_FBFF_820000_0_0_0.png" group-title="Sky Cinema",SKY Cinema Family HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3237.ts
 #EXTINF:-1 tvg-ID="CinemaFamilyPlus1.it" tvg-name="Sky Cinema Family HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_19_2CF4_2774_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Family HD  +1
@@ -57,58 +37,34 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3807.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18692.ts
 #EXTINF:-1 tvg-ID="CinemaPassionHD.it" tvg-name="Sky Cinema Passion HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_2B73_19C8_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Passion HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3821.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Cinema Passion HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_1_2B73_19C8_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Passion HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18694.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Sky Cinema Cult HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_2DCA_1A2C_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Cult HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22348.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Cinema Cult HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Cinema-Cult_o.jpg" group-title="Sky Cinema",Sky Cinema Cult HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18695.ts
 #EXTINF:-1 tvg-ID="CinemaClassics.it" tvg-name="Sky CInema Classic HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_2B65_19C8_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky CInema Classic HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3663.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Cinema Classic HD  +1" tvg-logo="http://epgstar.ovh/picon/1_0_1_2B65_19C8_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Classic HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18697.ts
 #EXTINF:-1 tvg-ID="CinemaComedyHD.it" tvg-name="Sky Cinema Comedy HD" tvg-logo="http://epgstar.ovh/picon/1_0_1_2DCD_1A2C_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Comedy HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3236.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Cinema Comedy  HD +1" tvg-logo="http://epgstar.ovh/picon/1_0_1_2DCD_1A2C_FBFF_820000_0_0_0.png" group-title="Sky Cinema",Sky Cinema Comedy  HD +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18696.ts
 #EXTINF:-1 tvg-ID="" tvg-name="---- < PREMIUM CINEMA > ---" tvg-logo="" group-title="",---- < PREMIUM CINEMA > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/17975.ts
-#EXTINF:-1 tvg-ID="PremiumCinema.it" tvg-name="Premium Cinema 1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema_o.jpg" group-title="Premium",Premium Cinema 1 HD
+#EXTINF:-1 tvg-ID="PremiumCinema.it" tvg-name="Premium Cinema 1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema_o.jpg" group-title="Premium Cinema",Premium Cinema 1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2450.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Cinema 1 HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema_o.jpg" group-title="+1",Premium Cinema 1 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18720.ts
-#EXTINF:-1 tvg-ID="PremiumCinemaPlus24.it" tvg-name="Premium Cinema  +24" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Plus24_o.jpg" group-title="Premium",Premium Cinema  +24
+#EXTINF:-1 tvg-ID="PremiumCinemaPlus24.it" tvg-name="Premium Cinema  +24" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Plus24_o.jpg" group-title="Premium Cinema",Premium Cinema  +24
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2518.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Cinema 1 24  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-2_o.jpg" group-title="+1",Premium Cinema 1 24  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18719.ts
-#EXTINF:-1 tvg-ID="PremiumCinema2.it" tvg-name="Premium Cinema 2 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-2_o.jpg" group-title="Premium",Premium Cinema 2 HD
+#EXTINF:-1 tvg-ID="PremiumCinema2.it" tvg-name="Premium Cinema 2 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-2_o.jpg" group-title="Premium Cinema",Premium Cinema 2 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2517.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Cinema 2 HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-2_o.jpg" group-title="+1",Premium Cinema 2 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18722.ts
-#EXTINF:-1 tvg-ID="PremiumCinema2Plus24.it" tvg-name="Premium Cinema 2  +24" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-2-Plus24_o.jpg" group-title="Premium",Premium Cinema 2  +24
+#EXTINF:-1 tvg-ID="PremiumCinema2Plus24.it" tvg-name="Premium Cinema 2  +24" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-2-Plus24_o.jpg" group-title="Premium Cinema",Premium Cinema 2  +24
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2519.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Cinema 2  24  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-2_o.jpg" group-title="+1",Premium Cinema 2  24  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18721.ts
-#EXTINF:-1 tvg-ID="StudioUniversal.it" tvg-name="Premium Studio Universal" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Studio-Universal-Italy_o.jpg" group-title="Premium",Premium Studio Universal
+#EXTINF:-1 tvg-ID="StudioUniversal.it" tvg-name="Premium Studio Universal" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Studio-Universal-Italy_o.jpg" group-title="Premium Cinema",Premium Studio Universal
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2462.ts
-#EXTINF:-1 tvg-ID="PremiumCinemaEmotion.it" tvg-name="Premium Cinema Emotion" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Emotion_o.jpg" group-title="Premium",Premium Cinema Emotion
+#EXTINF:-1 tvg-ID="PremiumCinemaEmotion.it" tvg-name="Premium Cinema Emotion" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Emotion_o.jpg" group-title="Premium Cinema",Premium Cinema Emotion
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2453.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Emotion  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Emotion_o.jpg" group-title="+1",Premium Emotion  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18727.ts
-#EXTINF:-1 tvg-ID="PremiumCinemaComedy.it" tvg-name="Premium Cinema Comedy" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Comedy_o.jpg" group-title="Premium",Premium Cinema Comedy
+#EXTINF:-1 tvg-ID="PremiumCinemaComedy.it" tvg-name="Premium Cinema Comedy" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Comedy_o.jpg" group-title="Premium Cinema",Premium Cinema Comedy
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2452.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Comedy  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Comedy_o.jpg" group-title="+1",Premium Comedy  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18723.ts
-#EXTINF:-1 tvg-ID="ParamountChannel.it" tvg-name="Paramount Channel" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema_o.jpg" group-title="Premium",Paramount Channel
+#EXTINF:-1 tvg-ID="ParamountChannel.it" tvg-name="Paramount Channel" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema_o.jpg" group-title="Premium Cinema",Paramount Channel
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/13608.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Premium Cinema Energy HD" tvg-logo="" group-title="Premium Cinema",Premium Cinema Energy HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22464.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Energy  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Cinema-Energy_o.jpg" group-title="+1",Premium Energy  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18728.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Premium Cinema Energy +24" tvg-logo="" group-title="Premium Cinema",Premium Cinema Energy +24
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22465.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Cinema Energy +24 +1" tvg-logo="" group-title="",Premium Cinema Energy +24 +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22470.ts
 #EXTINF:-1 tvg-ID="" tvg-name="---- < PRIMAFILA LIVE > ---" tvg-logo="" group-title="Primafila",---- < PRIMAFILA LIVE > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22899.ts
 #EXTINF:-1 tvg-ID="" tvg-name="VETRINA PRIMAFILA HD LIVE" tvg-logo="" group-title="Primafila",VETRINA PRIMAFILA HD LIVE
@@ -151,195 +107,145 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22890.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22889.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Prima Fila 19 LIVE" tvg-logo="" group-title="Primafila",Prima Fila 19 LIVE
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22888.ts
-#EXTINF:-1 tvg-ID="" tvg-name="---- < INTRATTENIMENTO SKY > ---" tvg-logo="http://i65.tinypic.com/5nj138.jpg" group-title="",---- < INTRATTENIMENTO SKY > ---
+#EXTINF:-1 tvg-ID="" tvg-name="---- < INTRATTENIMENTO SKY > ---" tvg-logo="http://i65.tinypic.com/5nj138.jpg" group-title="Intrattenimento Sky",---- < INTRATTENIMENTO SKY > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/1039.ts
-#EXTINF:-1 tvg-ID="Sky3D.it" tvg-name="Sky 3D" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-3D-IT_o.jpg" group-title="Intrattenimento",Sky 3D
+#EXTINF:-1 tvg-ID="Sky3D.it" tvg-name="Sky 3D" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-3D-IT_o.jpg" group-title="Intrattenimento Sky",Sky 3D
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/12007.ts
-#EXTINF:-1 tvg-ID="SKYUno.it" tvg-name="Sky Uno HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Uno_o.jpg" group-title="Intrattenimento",Sky Uno HD
+#EXTINF:-1 tvg-ID="SKYUno.it" tvg-name="Sky Uno HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Uno_o.jpg" group-title="Intrattenimento Sky",Sky Uno HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3808.ts
-#EXTINF:-1 tvg-ID="SKYUnoPlus1.it" tvg-name="Sky Uno HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Uno-Plus1_o.jpg" group-title="+1",Sky Uno HD  +1
+#EXTINF:-1 tvg-ID="SKYUnoPlus1.it" tvg-name="Sky Uno HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Uno-Plus1_o.jpg" group-title="Intrattenimento Sky",Sky Uno HD  +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18705.ts
-#EXTINF:-1 tvg-ID="SkyAtlantic.it" tvg-name="Sky Atlantic HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Atlantic-HD-Italia_o.jpg" group-title="Intrattenimento",Sky Atlantic HD
+#EXTINF:-1 tvg-ID="SkyAtlantic.it" tvg-name="Sky Atlantic HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Atlantic-HD-Italia_o.jpg" group-title="Intrattenimento Sky",Sky Atlantic HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3805.ts
-#EXTINF:-1 tvg-ID="SkyAtlanticPlus1.it" tvg-name="Sky Atlantic HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Atlantic-HD-Plus1-Italia_o.jpg" group-title="+1",Sky Atlantic HD  +1
+#EXTINF:-1 tvg-ID="SkyAtlanticPlus1.it" tvg-name="Sky Atlantic HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Atlantic-HD-Plus1-Italia_o.jpg" group-title="Intrattenimento Sky",Sky Atlantic HD  +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18711.ts
-#EXTINF:-1 tvg-ID="LaSposa.it" tvg-name="Sposa HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/La-Sposa_o.jpg" group-title="Intrattenimento",Sposa HD
+#EXTINF:-1 tvg-ID="LaSposa.it" tvg-name="Sposa HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/La-Sposa_o.jpg" group-title="Intrattenimento Sky",Sposa HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16158.ts
-#EXTINF:-1 tvg-ID="Fox.it" tvg-name="Fox HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-TV-USA_o.jpg" group-title="Intrattenimento",Fox HD
+#EXTINF:-1 tvg-ID="Fox.it" tvg-name="Fox HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-TV-USA_o.jpg" group-title="Intrattenimento Sky",Fox HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3801.ts
-#EXTINF:-1 tvg-ID="FoxPlus1.it" tvg-name="Fox HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Italia-Plus1_o.jpg" group-title="+1",Fox HD  +1
+#EXTINF:-1 tvg-ID="FoxPlus1.it" tvg-name="Fox HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Italia-Plus1_o.jpg" group-title="Intrattenimento Sky",Fox HD  +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18707.ts
-#EXTINF:-1 tvg-ID="FoxLife.it" tvg-name="Fox Life HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Life-IT_o.jpg" group-title="Intrattenimento",Fox Life HD
+#EXTINF:-1 tvg-ID="FoxLife.it" tvg-name="Fox Life HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Life-IT_o.jpg" group-title="Intrattenimento Sky",Fox Life HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3802.ts
-#EXTINF:-1 tvg-ID="FoxLifePlus1.it" tvg-name="Fox Life HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Life-IT-Plus1_o.jpg" group-title="+1",Fox Life HD  +1
+#EXTINF:-1 tvg-ID="FoxLifePlus1.it" tvg-name="Fox Life HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Life-IT-Plus1_o.jpg" group-title="Intrattenimento Sky",Fox Life HD  +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18708.ts
-#EXTINF:-1 tvg-ID="FoxLife.it" tvg-name="Fox Crime HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Crime-Italia_o.jpg" group-title="Intrattenimento",Fox Crime HD
+#EXTINF:-1 tvg-ID="FoxLife.it" tvg-name="Fox Crime HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Crime-Italia_o.jpg" group-title="Intrattenimento Sky",Fox Crime HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2424.ts
-#EXTINF:-1 tvg-ID="FoxCrimePlus1.it" tvg-name="Fox Crime HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Crime-Italia-Plus1_o.jpg" group-title="+1",Fox Crime HD  +1
+#EXTINF:-1 tvg-ID="FoxCrimePlus1.it" tvg-name="Fox Crime HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Crime-Italia-Plus1_o.jpg" group-title="Intrattenimento Sky",Fox Crime HD  +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18709.ts
-#EXTINF:-1 tvg-ID="FoxComedy.it" tvg-name="Fox Comedy HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Comedy-Italia_o.jpg" group-title="Intrattenimento",Fox Comedy HD
+#EXTINF:-1 tvg-ID="FoxComedy.it" tvg-name="Fox Comedy HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Comedy-Italia_o.jpg" group-title="Intrattenimento Sky",Fox Comedy HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21666.ts
-#EXTINF:-1 tvg-ID="" tvg-name="FOX COMEDY +1" tvg-logo="" group-title="",FOX COMEDY +1
+#EXTINF:-1 tvg-ID="" tvg-name="FOX COMEDY +1" tvg-logo="" group-title="Intrattenimento Sky",FOX COMEDY +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22467.ts
-#EXTINF:-1 tvg-ID="FoxAnimation.it" tvg-name="Fox Animation HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Animation-Italia_o.jpg" group-title="Intrattenimento",Fox Animation HD
+#EXTINF:-1 tvg-ID="FoxAnimation.it" tvg-name="Fox Animation HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Animation-Italia_o.jpg" group-title="Intrattenimento Sky",Fox Animation HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21667.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Fox Animation +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Animation-Italia_o.jpg" group-title="+1",Fox Animation +1
+#EXTINF:-1 tvg-ID="" tvg-name="Fox Animation +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Animation-Italia_o.jpg" group-title="Intrattenimento Sky",Fox Animation +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21105.ts
-#EXTINF:-1 tvg-ID="AXN.it" tvg-name="AXN HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/AXN-Italia_o.jpg" group-title="Intrattenimento",AXN HD
+#EXTINF:-1 tvg-ID="AXN.it" tvg-name="AXN HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/AXN-Italia_o.jpg" group-title="Intrattenimento Sky",AXN HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2411.ts
-#EXTINF:-1 tvg-ID="AXNPlus1.it" tvg-name="Axn HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/AXN-Italia-Plus1_o.jpg" group-title="+1",Axn HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18710.ts
-#EXTINF:-1 tvg-ID="AXNSciFi.it" tvg-name="AXN Sci Fi" tvg-logo="http://www.sat-address.com/f/pics/logotipi/AXN-SciFi-Italia_o.jpg" group-title="Intrattenimento",AXN Sci Fi
+#EXTINF:-1 tvg-ID="AXNSciFi.it" tvg-name="AXN Sci Fi" tvg-logo="http://www.sat-address.com/f/pics/logotipi/AXN-SciFi-Italia_o.jpg" group-title="Intrattenimento Sky",AXN Sci Fi
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21665.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Axn sci fi +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/AXN-SciFi-Italia_o.jpg" group-title="+1",Axn sci fi +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21107.ts
-#EXTINF:-1 tvg-ID="CrimeInvestigation.it" tvg-name="Crime Investigation HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Crime-Investigation-Network-Italia_o.jpg" group-title="Intrattenimento",Crime Investigation HD
+#EXTINF:-1 tvg-ID="CrimeInvestigation.it" tvg-name="Crime Investigation HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Crime-Investigation-Network-Italia_o.jpg" group-title="Intrattenimento Sky",Crime Investigation HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3649.ts
-#EXTINF:-1 tvg-ID="" tvg-name="CI crime investigation +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Crime-Investigation-Network-Italia_o.jpg" group-title="+1",CI crime investigation +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21106.ts
-#EXTINF:-1 tvg-ID="ComedyCentral.it" tvg-name="Comedy Central" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Comedy-Central-IT_o.jpg" group-title="Intrattenimento",Comedy Central
+#EXTINF:-1 tvg-ID="ComedyCentral.it" tvg-name="Comedy Central" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Comedy-Central-IT_o.jpg" group-title="Intrattenimento Sky",Comedy Central
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/17130.ts
-#EXTINF:-1 tvg-ID="RealTimePlus1.it" tvg-name="Real Time +1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Discovery-Real-Time-IT-Plus1_o.jpg" group-title="+1",Real Time +1 HD
+#EXTINF:-1 tvg-ID="RealTimePlus1.it" tvg-name="Real Time +1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Discovery-Real-Time-IT-Plus1_o.jpg" group-title="Intrattenimento Sky",Real Time +1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/12834.ts
-#EXTINF:-1 tvg-ID="DMAX.it" tvg-name="Dmax" tvg-logo="" group-title="Intrattenimento",Dmax
+#EXTINF:-1 tvg-ID="DMAX.it" tvg-name="Dmax" tvg-logo="" group-title="Tivusat",Dmax
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2417.ts
-#EXTINF:-1 tvg-ID="RealTime.it" tvg-name="Real Time" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Discovery-Real-Time-IT_o.jpg" group-title="Intrattenimento",Real Time
+#EXTINF:-1 tvg-ID="RealTime.it" tvg-name="Real Time" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Discovery-Real-Time-IT_o.jpg" group-title="Tivusat",Real Time
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2468.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Dee Jay Tv  1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/DeeJay-TV_o.jpg" group-title="Intrattenimento",Dee Jay Tv  1
+#EXTINF:-1 tvg-ID="" tvg-name="Dee Jay Tv  1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/DeeJay-TV_o.jpg" group-title="Tivusat",Dee Jay Tv  1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/12838.ts
-#EXTINF:-1 tvg-ID="MAN-GA" tvg-name="Man-ga" tvg-logo="http://www.sat-address.com/f/pics/logotipi/MAN-GA_o.jpg" group-title="Intrattenimento",Man-ga
+#EXTINF:-1 tvg-ID="MAN-GA" tvg-name="Man-ga" tvg-logo="http://www.sat-address.com/f/pics/logotipi/MAN-GA_o.jpg" group-title="Intrattenimento Sky",Man-ga
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/12210.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Manga +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/MAN-GA_o.jpg" group-title="+1",Manga +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21108.ts
-#EXTINF:-1 tvg-ID="Iris.it" tvg-name="Iris" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Iris-TV-IT_o.jpg" group-title="Intrattenimento",Iris
+#EXTINF:-1 tvg-ID="Iris.it" tvg-name="Iris" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Iris-TV-IT_o.jpg" group-title="Tivusat",Iris
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2514.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Iris  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Iris-TV-IT_o.jpg" group-title="+1",Iris  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20665.ts
-#EXTINF:-1 tvg-ID="Giallo.it" tvg-name="Giallo" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Giallo-IT_o.jpg" group-title="Intrattenimento",Giallo
+#EXTINF:-1 tvg-ID="Giallo.it" tvg-name="Giallo" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Giallo-IT_o.jpg" group-title="Tivusat",Giallo
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3223.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Giallo  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Giallo-IT_o.jpg" group-title="+1",Giallo  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20653.ts
-#EXTINF:-1 tvg-ID="cielo.it" tvg-name="Cielo" tvg-logo="http://www.lyngsat-logo.com/hires/cc/cielo.png" group-title="Intrattenimento",Cielo
+#EXTINF:-1 tvg-ID="cielo.it" tvg-name="Cielo" tvg-logo="http://www.lyngsat-logo.com/hires/cc/cielo.png" group-title="Tivusat",Cielo
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2414.ts
-#EXTINF:-1 tvg-ID="TV2000.it" tvg-name="TV 2000" tvg-logo="" group-title="Intrattenimento",TV 2000
+#EXTINF:-1 tvg-ID="TV2000.it" tvg-name="TV 2000" tvg-logo="" group-title="Tivusat",TV 2000
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2515.ts
-#EXTINF:-1 tvg-ID="RaisatPremium.it" tvg-name="Rai Premium" tvg-logo="http://www.lyngsat-logo.com/logo/tv/rr/rai_premium.png" group-title="Intrattenimento",Rai Premium
+#EXTINF:-1 tvg-ID="RaisatPremium.it" tvg-name="Rai Premium" tvg-logo="http://www.lyngsat-logo.com/logo/tv/rr/rai_premium.png" group-title="Tivusat",Rai Premium
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2466.ts
-#EXTINF:-1 tvg-ID="RaisatCinema.it" tvg-name="Rai Movie" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Movie_o.jpg" group-title="Intrattenimento",Rai Movie
+#EXTINF:-1 tvg-ID="RaisatCinema.it" tvg-name="Rai Movie" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Movie_o.jpg" group-title="Tivusat",Rai Movie
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2464.ts
-#EXTINF:-1 tvg-ID="RAI4.it" tvg-name="Rai 4" tvg-logo="" group-title="Intrattenimento",Rai 4
+#EXTINF:-1 tvg-ID="RAI4.it" tvg-name="Rai 4" tvg-logo="" group-title="Tivusat",Rai 4
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2407.ts
-#EXTINF:-1 tvg-ID="RAI5.it" tvg-name="Rai 5" tvg-logo="" group-title="Intrattenimento",Rai 5
+#EXTINF:-1 tvg-ID="RAI5.it" tvg-name="Rai 5" tvg-logo="" group-title="Tivusat",Rai 5
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2408.ts
-#EXTINF:-1 tvg-ID="MediasetExtra.it" tvg-name="Mediaset Extra" tvg-logo="" group-title="Intrattenimento",Mediaset Extra
+#EXTINF:-1 tvg-ID="MediasetExtra.it" tvg-name="Mediaset Extra" tvg-logo="" group-title="Tivusat",Mediaset Extra
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2434.ts
-#EXTINF:-1 tvg-ID="La7d.it" tvg-name="La 7d" tvg-logo="http://www.lyngsat-logo.com/logo/tv/ll/la_7d_it.png" group-title="Intrattenimento",La 7d
+#EXTINF:-1 tvg-ID="La7d.it" tvg-name="La 7d" tvg-logo="http://www.lyngsat-logo.com/logo/tv/ll/la_7d_it.png" group-title="Tivusat",La 7d
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2431.ts
-#EXTINF:-1 tvg-ID="LA5.it" tvg-name="La 5" tvg-logo="" group-title="Intrattenimento",La 5
+#EXTINF:-1 tvg-ID="LA5.it" tvg-name="La 5" tvg-logo="" group-title="Tivusat",La 5
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2516.ts
-#EXTINF:-1 tvg-ID="TopCrime.it" tvg-name="Top Crime" tvg-logo="" group-title="Intrattenimento",Top Crime
+#EXTINF:-1 tvg-ID="TopCrime.it" tvg-name="Top Crime" tvg-logo="" group-title="Tivusat",Top Crime
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2489.ts
-#EXTINF:-1 tvg-ID="Italia2.it" tvg-name="Italia 2" tvg-logo="" group-title="Intrattenimento",Italia 2
+#EXTINF:-1 tvg-ID="Italia2.it" tvg-name="Italia 2" tvg-logo="" group-title="Tivusat",Italia 2
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2429.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Espansione TV" tvg-logo="" group-title="Intrattenimento",Espansione TV
+#EXTINF:-1 tvg-ID="" tvg-name="Espansione TV" tvg-logo="" group-title="Tivusat",Espansione TV
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21070.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Tv Globo" tvg-logo="" group-title="Intrattenimento",Tv Globo
+#EXTINF:-1 tvg-ID="" tvg-name="Tv Globo" tvg-logo="" group-title="Tivusat",Tv Globo
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2499.ts
-#EXTINF:-1 tvg-ID="" tvg-name="---- < INTRATTENIMENTO PREMIUM > ---" tvg-logo="" group-title="",---- < INTRATTENIMENTO PREMIUM > ---
+#EXTINF:-1 tvg-ID="" tvg-name="---- < INTRATTENIMENTO PREMIUM > ---" tvg-logo="" group-title="Intrattenimento Premium",---- < INTRATTENIMENTO PREMIUM > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22354.ts
 #EXTINF:-1 tvg-ID="PremiumAction.it" tvg-name="Premium Action HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Action_o.jpg" group-title="Intrattenimento Premium",Premium Action HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2521.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Action +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Action_o.jpg" group-title="Intrattenimento Premium",Premium Action +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18717.ts
 #EXTINF:-1 tvg-ID="PremiumActionPlus24.it" tvg-name="Premium Cinema Action  24" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Action-Plus24_o.jpg" group-title="Intrattenimento Premium",Premium Cinema Action  24
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2451.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Cinema Action 24 +1" tvg-logo="" group-title="",Premium Cinema Action 24 +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22468.ts
 #EXTINF:-1 tvg-ID="PremiumCrime.it" tvg-name="Premium Crime HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Crime_o.jpg" group-title="Intrattenimento Premium",Premium Crime HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2522.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Crime HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Crime_o.jpg" group-title="Intrattenimento Premium",Premium Crime HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18725.ts
 #EXTINF:-1 tvg-ID="PremiumCrimePlus24.it" tvg-name="Premium Crime  + 24" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Crime-Plus24_o.jpg" group-title="Intrattenimento Premium",Premium Crime  + 24
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2455.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Crime 24  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Crime-Plus24_o.jpg" group-title="Intrattenimento Premium",Premium Crime 24  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18724.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Premium Investigation Discovery" tvg-logo="" group-title="Intrattenimento Premium",Premium Investigation Discovery
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22466.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Investigation Discovery +1" tvg-logo="" group-title="",Premium Investigation Discovery +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22469.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Premium Stories" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Stories_o.jpg" group-title="Intrattenimento Premium",Premium Stories
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2461.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Stories  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Stories_o.jpg" group-title="Intrattenimento Premium",Premium Stories  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18733.ts
 #EXTINF:-1 tvg-ID="StoriesPlus24.it" tvg-name="Premium Stories + 24" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Stories_o.jpg" group-title="Intrattenimento Premium",Premium Stories + 24
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/13141.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Stories  24  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Stories_o.jpg" group-title="Intrattenimento Premium",Premium Stories  24  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18734.ts
 #EXTINF:-1 tvg-ID="Joi.it" tvg-name="Premium Joy" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Joi-Mediaset_o.jpg" group-title="Intrattenimento Premium",Premium Joy
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2460.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Joy  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Joi-Plus1-Mediaset_o.jpg" group-title="Intrattenimento Premium",Premium Joy  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18729.ts
 #EXTINF:-1 tvg-ID="JoiPlus24.it" tvg-name="Premium Joy + 24" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Joi-Mediaset_o.jpg" group-title="Intrattenimento Premium",Premium Joy + 24
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/13140.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Joy 24  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Joi-Mediaset_o.jpg" group-title="Intrattenimento Premium",Premium Joy 24  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18730.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Premium Extra 1 ( GF )" tvg-logo="" group-title="Intrattenimento Premium",Premium Extra 1 ( GF )
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22352.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Premium Extra 2 ( GF )" tvg-logo="" group-title="Intrattenimento Premium",Premium Extra 2 ( GF )
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22353.ts
-#EXTINF:-1 tvg-ID="" tvg-name="---- < SKY SPORT > ---" tvg-logo="http://i65.tinypic.com/5nj138.jpg" group-title="",---- < SKY SPORT > ---
+#EXTINF:-1 tvg-ID="" tvg-name="---- < SKY SPORT > ---" tvg-logo="http://i65.tinypic.com/5nj138.jpg" group-title="Sky Sport",---- < SKY SPORT > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/1033.ts
 #EXTINF:-1 tvg-ID="SKYSport24.it" tvg-name="Sky Sport 24 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Sport-24_o.jpg" group-title="Sky Sport",Sky Sport 24 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2483.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Sport 24 HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Sport-24_o.jpg" group-title="Sky Sport",Sky Sport 24 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18698.ts
 #EXTINF:-1 tvg-ID="SkySportPlus.it" tvg-name="Sky Sport Plus HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Sport-Plus-IT_o.jpg" group-title="Sky Sport",Sky Sport Plus HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/8640.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Sport Plus HD  +1" tvg-logo="" group-title="Sky Sport",Sky Sport Plus HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18702.ts
 #EXTINF:-1 tvg-ID="SKYSport1.it" tvg-name="Sky Sport 1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Sport-HD-DE_o.jpg" group-title="Sky Sport",Sky Sport 1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2480.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Sport 1 HD  +1" tvg-logo="" group-title="Sky Sport",Sky Sport 1 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18699.ts
 #EXTINF:-1 tvg-ID="SKYSport2.it" tvg-name="Sky Sport 2 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Sport-2_o.jpg" group-title="Sky Sport",Sky Sport 2 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2481.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Sport 2 HD  +1" tvg-logo="" group-title="Sky Sport",Sky Sport 2 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18700.ts
 #EXTINF:-1 tvg-ID="SKYSport3.it" tvg-name="Sky Sport 3 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Sport-3_o.jpg" group-title="Sky Sport",Sky Sport 3 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2482.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Sport 3 HD  +1" tvg-logo="" group-title="Sky Sport",Sky Sport 3 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18701.ts
 #EXTINF:-1 tvg-ID="FoxSports.it" tvg-name="Fox Sports HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fox-Sports-Italia_o.jpg" group-title="Sky Sport",Fox Sports HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3109.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Fox Sport HD  +1" tvg-logo="" group-title="Sky Sport",Fox Sport HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18706.ts
 #EXTINF:-1 tvg-ID="SkySportF1.it" tvg-name="Sky Sport F1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Sport-F1-HD-Italia_o.jpg" group-title="Sky Sport",Sky Sport F1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2478.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Sport F1 HD  +1" tvg-logo="" group-title="Sky Sport",Sky Sport F1 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18703.ts
 #EXTINF:-1 tvg-ID="SkySportMotoGP.it" tvg-name="Sky Moto GP HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Sport-Moto-GP-HD_o.jpg" group-title="Sky Sport",Sky Moto GP HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2479.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Sport MotoGP HD  +1" tvg-logo="" group-title="Sky Sport",Sky Sport MotoGP HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18704.ts
 #EXTINF:-1 tvg-ID="" tvg-name="WWE Wrestling HD" tvg-logo="" group-title="Sky Sport",WWE Wrestling HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22461.ts
 #EXTINF:-1 tvg-ID="ClassHorse.it" tvg-name="Class Horse Tv" tvg-logo="http://www.lyngsat-logo.com/logo/tv/cc/class_horse_tv.png" group-title="Sky Sport",Class Horse Tv
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16159.ts
 #EXTINF:-1 tvg-ID="Eurosport.it" tvg-name="Eurosport 1 HD" tvg-logo="http://www.lyngsat-logo.com/logo/tv/ee/eurosport_fr_1_hd.png" group-title="Sky Sport",Eurosport 1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/4156.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Eurosport 1  +1" tvg-logo="" group-title="Sky Sport",Premium Eurosport 1  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20661.ts
 #EXTINF:-1 tvg-ID="Eurosport2.it" tvg-name="Eurosport 2 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Eurosport-2-Italia_o.jpg" group-title="Sky Sport",Eurosport 2 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/4157.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Eurosport 2  +1" tvg-logo="" group-title="Sky Sport",Premium Eurosport 2  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20662.ts
-#EXTINF:-1 tvg-ID="Sportitalia.it" tvg-name="Sport Italia" tvg-logo="http://www.sat-address.com/f/pics/logotipi/SportItalia_o.jpg" group-title="Sky Sport",Sport Italia
+#EXTINF:-1 tvg-ID="Sportitalia.it" tvg-name="Sport Italia" tvg-logo="http://www.sat-address.com/f/pics/logotipi/SportItalia_o.jpg" group-title="Tivusat",Sport Italia
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/7156.ts
-#EXTINF:-1 tvg-ID="RaiSport1.it" tvg-name="Rai Sport 1" tvg-logo="" group-title="Sky Sport",Rai Sport 1
+#EXTINF:-1 tvg-ID="RaiSport1.it" tvg-name="Rai Sport 1" tvg-logo="" group-title="Tivusat",Rai Sport 1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2467.ts
-#EXTINF:-1 tvg-ID="RaiSport1.it" tvg-name="Rai Sport 1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Sport-1_o.jpg" group-title="Sky Sport",Rai Sport 1 HD
+#EXTINF:-1 tvg-ID="RaiSport1.it" tvg-name="Rai Sport 1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Sport-1_o.jpg" group-title="Tivusat",Rai Sport 1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/13609.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Rai Sport 2 HD" tvg-logo="" group-title="Sky Sport",Rai Sport 2 HD
+#EXTINF:-1 tvg-ID="" tvg-name="Rai Sport 2 HD" tvg-logo="" group-title="Tivusat",Rai Sport 2 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22462.ts
 #EXTINF:-1 tvg-ID="SuperTennis.it" tvg-name="Supertennis HD" tvg-logo="" group-title="Sky Sport",Supertennis HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2513.ts
@@ -357,7 +263,7 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/13859.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20651.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Fight Network italia" tvg-logo="" group-title="Sky Sport",Fight Network italia
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22901.ts
-#EXTINF:-1 tvg-ID="" tvg-name="---- < SKY CALCIO  > ---" tvg-logo="" group-title="",---- < SKY CALCIO  > ---
+#EXTINF:-1 tvg-ID="" tvg-name="---- < SKY CALCIO  > ---" tvg-logo="" group-title="Sky Calcio",---- < SKY CALCIO  > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/1359.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Sky Calcio INFO" tvg-logo="" group-title="Sky Calcio",Sky Calcio INFO
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22900.ts
@@ -365,8 +271,6 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22900.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2484.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Sky Supercalcio HD Backup" tvg-logo="" group-title="Sky Calcio",Sky Supercalcio HD Backup
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22321.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Supercalcio HD  +1" tvg-logo="" group-title="Sky Calcio",Sky Supercalcio HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18712.ts
 #EXTINF:-1 tvg-ID="SkyCalcio1.it" tvg-name="Sky Calcio 1 HD" tvg-logo="" group-title="Sky Calcio",Sky Calcio 1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2470.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Sky Calcio 1 HD Backup" tvg-logo="" group-title="Sky Calcio",Sky Calcio 1 HD Backup
@@ -395,7 +299,7 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/4215.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/8622.ts
 #EXTINF:-1 tvg-ID="LazioStyleChannel.it" tvg-name="Lazio Channel" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Lazio-Style-TV_o.jpg" group-title="Sky Calcio",Lazio Channel
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/12211.ts
-#EXTINF:-1 tvg-ID="" tvg-name="---- < PREMIUM SPORT > ---" tvg-logo="" group-title="",---- < PREMIUM SPORT > ---
+#EXTINF:-1 tvg-ID="" tvg-name="---- < PREMIUM SPORT > ---" tvg-logo="" group-title="Premium Sport",---- < PREMIUM SPORT > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22355.ts
 #EXTINF:-1 tvg-ID="Premium Sport HD" tvg-name="Premium Sport 1 FHD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Sport_o.jpg" group-title="Premium Sport",Premium Sport 1 FHD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16137.ts
@@ -403,17 +307,13 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16137.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16138.ts
 #EXTINF:-1 tvg-ID="PremiumSport.it" tvg-name="Premium Sport 1 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Sport_o.jpg" group-title="Premium Sport",Premium Sport 1 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3664.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Sport 1 HD  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Sport_o.jpg" group-title="Premium Sport",Premium Sport 1 HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18731.ts
 #EXTINF:-1 tvg-ID="Premium Sport 2 HD" tvg-name="Premium Sport 2 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Sport_o.jpg" group-title="Premium Sport",Premium Sport 2 HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/12840.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Premium Sport 1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Sport_o.jpg" group-title="Premium Sport",Premium Sport 1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16139.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Sport 1  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Sport_o.jpg" group-title="Premium Sport",Premium Sport 1  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18732.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Premium Sport 2" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Premium-Sport_o.jpg" group-title="Premium Sport",Premium Sport 2
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16140.ts
-#EXTINF:-1 tvg-ID="" tvg-name="---- < PREMIUM CALCIO > ---" tvg-logo="" group-title="",---- < PREMIUM CALCIO > ---
+#EXTINF:-1 tvg-ID="" tvg-name="---- < PREMIUM CALCIO > ---" tvg-logo="" group-title="Premium Calcio",---- < PREMIUM CALCIO > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22356.ts
 #EXTINF:-1 tvg-ID="PremiumCalcio1.it" tvg-name="Premium Calcio" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Mediaset-Calcio-1_o.jpg" group-title="Premium Calcio",Premium Calcio
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2490.ts
@@ -439,84 +339,182 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/13122.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/1036.ts
 #EXTINF:-1 tvg-ID="NationalGeo.it" tvg-name="National Geographic HD" tvg-logo="" group-title="Cultura",National Geographic HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2437.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Nat Geo HD  +1" tvg-logo="" group-title="+1",Nat Geo HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20646.ts
 #EXTINF:-1 tvg-ID="NatGeoPeople.it" tvg-name="Nat Geo People HD" tvg-logo="http://www.lyngsat-logo.com/hires/nn/nat_geo_people_us_hd.png" group-title="Cultura",Nat Geo People HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2438.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Nat Geo People HD  +1" tvg-logo="" group-title="+1",Nat Geo People HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20647.ts
 #EXTINF:-1 tvg-ID="NatGeoWild.it" tvg-name="Nat Geo Wild HD" tvg-logo="" group-title="Cultura",Nat Geo Wild HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2439.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Nat Geo Wild HD  +1" tvg-logo="" group-title="+1",Nat Geo Wild HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20648.ts
 #EXTINF:-1 tvg-ID="AnimalPlanet.it" tvg-name="Animal Planet" tvg-logo="" group-title="Cultura",Animal Planet
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2410.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Animal Planet  +1" tvg-logo="" group-title="+1",Animal Planet  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20654.ts
 #EXTINF:-1 tvg-ID="Discovery.it" tvg-name="Discovery HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Discovery-Ch-Italia_o.jpg" group-title="Cultura",Discovery HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3824.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Discovery HD  +1" tvg-logo="" group-title="+1",Discovery HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20641.ts
 #EXTINF:-1 tvg-ID="DiscoverySci.it" tvg-name="Discovery Science HD" tvg-logo="" group-title="Cultura",Discovery Science HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3825.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Discovery Sci HD  +1" tvg-logo="" group-title="+1",Discovery Sci HD  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20642.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Discovery T&L HD" tvg-logo="" group-title="Cultura",Discovery T&L HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3817.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Discovery T&L +1" tvg-logo="" group-title="+1",Discovery T&L +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20643.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Dmax +1" tvg-logo="" group-title="+1",Dmax +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/12902.ts
 #EXTINF:-1 tvg-ID="Classica HD" tvg-name="Classica HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Classica-Sky-IT_o.jpg" group-title="Cultura",Classica HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/17131.ts
 #EXTINF:-1 tvg-ID="CacciaePesca.it" tvg-name="Caccia e Pesca" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Caccia-Pesca_o.jpg" group-title="Cultura",Caccia e Pesca
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3823.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Caccia Pesca  +1" tvg-logo="" group-title="+1",Caccia Pesca  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20649.ts
 #EXTINF:-1 tvg-ID="PescaeCaccia.it" tvg-name="Pesca e Caccia" tvg-logo="" group-title="Cultura",Pesca e Caccia
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/12197.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Pesca Caccia  +1" tvg-logo="" group-title="+1",Pesca Caccia  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20650.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Italia Fishing" tvg-logo="" group-title="Sky Sport",Italia Fishing
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16160.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Italian Fishing  +1" tvg-logo="" group-title="+1",Italian Fishing  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20645.ts
 #EXTINF:-1 tvg-ID="Focus.it" tvg-name="Focus" tvg-logo="" group-title="Cultura",Focus
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2422.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Focus  +1" tvg-logo="" group-title="+1",Focus  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20652.ts
 #EXTINF:-1 tvg-ID="History.it" tvg-name="History HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/History-Channel-HD-Europe_o.jpg" group-title="Cultura",History HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/4159.ts
-#EXTINF:-1 tvg-ID="" tvg-name="History  +1" tvg-logo="" group-title="+1",History  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20644.ts
 #EXTINF:-1 tvg-ID="eXplora.it" tvg-name="Explora HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Dea-Explora_o.jpg" group-title="Cultura",Explora HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/4158.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Explora +1" tvg-logo="" group-title="+1",Sky Explora +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20691.ts
 #EXTINF:-1 tvg-ID="SkyArte.it" tvg-name="Sky Arte HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-Arte-HD-Italia_o.jpg" group-title="Cultura",Sky Arte HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2524.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Arte +1" tvg-logo="" group-title="+1",Sky Arte +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21109.ts
 #EXTINF:-1 tvg-ID="GamberoRosso.it" tvg-name="Gambero Rosso HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Gambero-Rosso_o.jpg" group-title="Cultura",Gambero Rosso HD
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/3658.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Sky Gambero Rosso +1" tvg-logo="" group-title="+1",Sky Gambero Rosso +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20690.ts
 #EXTINF:-1 tvg-ID="Alice.it" tvg-name="Alice" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Alice_o.jpg" group-title="Tivusat",Alice
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2409.ts
 #EXTINF:-1 tvg-ID="FineLiving.it" tvg-name="Fine Living" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fine-Living-Italia_o.jpg" group-title="Tivusat",Fine Living
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2421.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Fine Living  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Fine-Living-Italia_o.jpg" group-title="+1",Fine Living  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20664.ts
 #EXTINF:-1 tvg-ID="Marcopolo.it" tvg-name="Marco Polo" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Marco-Polo_o.jpg" group-title="Tivusat",Marco Polo
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2433.ts
 #EXTINF:-1 tvg-ID="" tvg-name="E! Enternament" tvg-logo="" group-title="Tivusat",E! Enternament
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2418.ts
-#EXTINF:-1 tvg-ID="RaiStoria.it" tvg-name="Rai Storia" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Storia_o.jpg" group-title="Cultura",Rai Storia
+#EXTINF:-1 tvg-ID="RaiStoria.it" tvg-name="Rai Storia" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Storia_o.jpg" group-title="Tivusat",Rai Storia
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/14099.ts
 #EXTINF:-1 tvg-ID="RaiScuola.it" tvg-name="Rai Scuola" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Scuola_o.jpg" group-title="Tivusat",Rai Scuola
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2496.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Rai Senato" tvg-logo="" group-title="Tivusat",Rai Senato
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2497.ts
+#EXTINF:-1 tvg-ID="" tvg-name="---- < CANALI CON RITARDO DI 1H > ---" tvg-logo="" group-title="+1",---- < CANALI CON RITARDO DI 1H > ---
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22928.ts
+#EXTINF:-1 tvg-ID="" tvg-name="RAI HD 1 PIU1" tvg-logo="" group-title="+1",RAI HD 1 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22998.ts
+#EXTINF:-1 tvg-ID="" tvg-name="RAI HD 2 PIU1" tvg-logo="" group-title="+1",RAI HD 2 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22999.ts
+#EXTINF:-1 tvg-ID="" tvg-name="RAI 3 HD PIU1" tvg-logo="" group-title="+1",RAI 3 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23000.ts
+#EXTINF:-1 tvg-ID="" tvg-name="RETE 4 HD PIU1" tvg-logo="" group-title="+1",RETE 4 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23001.ts
+#EXTINF:-1 tvg-ID="" tvg-name="CANALE 5 HD PIU1" tvg-logo="" group-title="+1",CANALE 5 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23002.ts
+#EXTINF:-1 tvg-ID="" tvg-name="ITALIA 1 HD PIU1" tvg-logo="" group-title="+1",ITALIA 1 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23003.ts
+#EXTINF:-1 tvg-ID="" tvg-name="LA 7 HD PIU1" tvg-logo="" group-title="+1",LA 7 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23004.ts
+#EXTINF:-1 tvg-ID="" tvg-name="LA 7d PIU1" tvg-logo="" group-title="+1",LA 7d PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23005.ts
+#EXTINF:-1 tvg-ID="" tvg-name="AXN PIU1" tvg-logo="" group-title="+1",AXN PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23032.ts
+#EXTINF:-1 tvg-ID="" tvg-name="AXN SCI FI PIU1" tvg-logo="" group-title="+1",AXN SCI FI PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23033.ts
+#EXTINF:-1 tvg-ID="" tvg-name="BIKE CHANNEL PIU1" tvg-logo="" group-title="+1",BIKE CHANNEL PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23054.ts
+#EXTINF:-1 tvg-ID="" tvg-name="COMEDY CENTRAL PIU1" tvg-logo="" group-title="+1",COMEDY CENTRAL PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23035.ts
+#EXTINF:-1 tvg-ID="" tvg-name="CRIME INVESTIGATION PIU1" tvg-logo="" group-title="+1",CRIME INVESTIGATION PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23034.ts
+#EXTINF:-1 tvg-ID="" tvg-name="DISCOVERY INVESTIGATION" tvg-logo="" group-title="+1",DISCOVERY INVESTIGATION
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23040.ts
+#EXTINF:-1 tvg-ID="" tvg-name="EUROSPORT 1 HD PIU1" tvg-logo="" group-title="+1",EUROSPORT 1 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23052.ts
+#EXTINF:-1 tvg-ID="" tvg-name="EUROSPORT 2 HD PIU1" tvg-logo="" group-title="+1",EUROSPORT 2 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23053.ts
+#EXTINF:-1 tvg-ID="" tvg-name="FOX ANIMATION PIU1" tvg-logo="" group-title="+1",FOX ANIMATION PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23031.ts
+#EXTINF:-1 tvg-ID="" tvg-name="FOX COMEDY PIU1" tvg-logo="" group-title="+1",FOX COMEDY PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23030.ts
+#EXTINF:-1 tvg-ID="" tvg-name="FOX CRIME PIU1" tvg-logo="" group-title="+1",FOX CRIME PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23029.ts
+#EXTINF:-1 tvg-ID="" tvg-name="FOX HD PIU1" tvg-logo="" group-title="+1",FOX HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23027.ts
+#EXTINF:-1 tvg-ID="" tvg-name="FOX LIFE HD PIU1" tvg-logo="" group-title="+1",FOX LIFE HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23028.ts
+#EXTINF:-1 tvg-ID="" tvg-name="FOX SPORT HD PIU1" tvg-logo="" group-title="+1",FOX SPORT HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23049.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM ACTION 24 PIU1" tvg-logo="" group-title="+1",PREMIUM ACTION 24 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23037.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM ACTION PIU1" tvg-logo="" group-title="+1",PREMIUM ACTION PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23036.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CALCIO 1 HD PIU1" tvg-logo="" group-title="+1",PREMIUM CALCIO 1 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23062.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CALCIO 2 HD PIU1" tvg-logo="" group-title="+1",PREMIUM CALCIO 2 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23063.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CINEMA 1 24 HD PIU1" tvg-logo="" group-title="+1",PREMIUM CINEMA 1 24 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23018.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CINEMA 1 HD PIU1" tvg-logo="" group-title="+1",PREMIUM CINEMA 1 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23016.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CINEMA 2 24 HD PIU1" tvg-logo="" group-title="+1",PREMIUM CINEMA 2 24 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23019.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CINEMA 2 HD PIU1" tvg-logo="" group-title="+1",PREMIUM CINEMA 2 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23017.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CINEMA EMOTION HD PIU1" tvg-logo="" group-title="+1",PREMIUM CINEMA EMOTION HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23021.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CINEMA ENERGY HD PIU1" tvg-logo="" group-title="+1",PREMIUM CINEMA ENERGY HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23023.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CRIME 24 PIU1" tvg-logo="" group-title="+1",PREMIUM CRIME 24 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23039.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM CRIME PIU1" tvg-logo="" group-title="+1",PREMIUM CRIME PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23038.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM JOY 24 PIU1" tvg-logo="" group-title="+1",PREMIUM JOY 24 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23044.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM JOY PIU1" tvg-logo="" group-title="+1",PREMIUM JOY PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23043.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM SPORT 2HD PIU1" tvg-logo="" group-title="+1",PREMIUM SPORT 2HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23061.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM SPORT HD PIU1" tvg-logo="" group-title="+1",PREMIUM SPORT HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23060.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM STORIES 24 PIU1" tvg-logo="" group-title="+1",PREMIUM STORIES 24 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23042.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM STORIES PIU1" tvg-logo="" group-title="+1",PREMIUM STORIES PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23041.ts
+#EXTINF:-1 tvg-ID="" tvg-name="PREMIUM STUDIO UNIVERSAL HD PIU1" tvg-logo="" group-title="+1",PREMIUM STUDIO UNIVERSAL HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23020.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY 3D PIU1" tvg-logo="" group-title="+1",SKY 3D PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23024.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY ATLANTIC HD PIU1" tvg-logo="" group-title="+1",SKY ATLANTIC HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23026.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CALCIO 1 PIU1" tvg-logo="" group-title="+1",SKY CALCIO 1 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23057.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CALCIO 2 PIU1" tvg-logo="" group-title="+1",SKY CALCIO 2 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23058.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CALCIO 3 PIU1" tvg-logo="" group-title="+1",SKY CALCIO 3 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23059.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA 1 HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA 1 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23007.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA 24 HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA 24 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23008.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA CLASSIC HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA CLASSIC HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23014.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA COMEDY HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA COMEDY HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23015.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA CULT HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA CULT HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23013.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA FAMILY HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA FAMILY HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23010.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA HITS HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA HITS HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23009.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA MAX HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA MAX HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23011.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY CINEMA PASSION HD PIU1" tvg-logo="" group-title="+1",SKY CINEMA PASSION HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23012.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY SPORT 1 HD PIU1" tvg-logo="" group-title="+1",SKY SPORT 1 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23046.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY SPORT 2 HD PIU1" tvg-logo="" group-title="+1",SKY SPORT 2 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23047.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY SPORT 24 HD PIU1" tvg-logo="" group-title="+1",SKY SPORT 24 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23045.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY SPORT 3 HD PIU1" tvg-logo="" group-title="+1",SKY SPORT 3 HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23048.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY SPORT FORMULA1 PIU1" tvg-logo="" group-title="+1",SKY SPORT FORMULA1 PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23051.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY SPORT MOTOGP PIU1" tvg-logo="" group-title="+1",SKY SPORT MOTOGP PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23050.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY SUPERCALCIO HD PIU1" tvg-logo="" group-title="+1",SKY SUPERCALCIO HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23055.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY SUPERCALCIO HD piu 2H" tvg-logo="" group-title="+1",SKY SUPERCALCIO HD piu 2H
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23056.ts
+#EXTINF:-1 tvg-ID="" tvg-name="SKY UNO HD PIU1" tvg-logo="" group-title="+1",SKY UNO HD PIU1
+http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/23025.ts
 #EXTINF:-1 tvg-ID="" tvg-name="---- < LUCKY EXTRA ULTRA HD > ---" tvg-logo="" group-title="Ultra HD",---- < LUCKY EXTRA ULTRA HD > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/22459.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Sky Cinema 1 UltraHD" tvg-logo="" group-title="Ultra HD",Sky Cinema 1 UltraHD
@@ -707,8 +705,6 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/21103.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/13701.ts
 #EXTINF:-1 tvg-ID="Boing.it" tvg-name="Boing" tvg-logo="" group-title="Bambini",Boing
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/14082.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Boing  +1" tvg-logo="" group-title="+1",Boing  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20655.ts
 #EXTINF:-1 tvg-ID="DisneyChannel.it" tvg-name="Sky Disney Channel" tvg-logo="" group-title="Bambini",Sky Disney Channel
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/16161.ts
 #EXTINF:-1 tvg-ID="DisneyChannel.it" tvg-name="Premium Disney Channel" tvg-logo="http://img1.wikia.nocookie.net/__cb20131011214000/logopedia/images/8/8e/Disney_Channel_10th_Logo.png" group-title="Premium",Premium Disney Channel
@@ -723,32 +719,22 @@ http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2458.ts
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2416.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Cartoonito" tvg-logo="" group-title="Bambini",Cartoonito
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2413.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Cartonito  +1" tvg-logo="" group-title="+1",Cartonito  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20656.ts
 #EXTINF:-1 tvg-ID="" tvg-name="K2" tvg-logo="" group-title="Bambini",K2
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2430.ts
 #EXTINF:-1 tvg-ID="" tvg-name="K2  +1" tvg-logo="" group-title="+1",K2  +1
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20658.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Frisbee" tvg-logo="" group-title="Bambini",Frisbee
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2427.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Frisbee  +1" tvg-logo="" group-title="+1",Frisbee  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20657.ts
 #EXTINF:-1 tvg-ID="RaiGulp.it" tvg-name="Rai Gulp" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Gulp_o.jpg" group-title="Tivusat",Rai Gulp
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2463.ts
 #EXTINF:-1 tvg-ID="Super!.it" tvg-name="Super!" tvg-logo="http://www.sat-address.com/f/pics/logotipi/DeA-Super_o.jpg" group-title="Bambini",Super!
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2487.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Super  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/DeA-Super_o.jpg" group-title="Bambini",Super  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20659.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Rai Yoyo  +1" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Yoyo_o.jpg" group-title="+1",Rai Yoyo  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/20663.ts
 #EXTINF:-1 tvg-ID="RAIYoyo.it" tvg-name="Rai Yoyo" tvg-logo="http://www.sat-address.com/f/pics/logotipi/RAI-Yoyo_o.jpg" group-title="Tivusat",Rai Yoyo
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2498.ts
 #EXTINF:-1 tvg-ID="" tvg-name="Nikeleodeon" tvg-logo="" group-title="Bambini",Nikeleodeon
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/8663.ts
 #EXTINF:-1 tvg-ID="CartoonNetwork.it" tvg-name="Premium Carton Network" tvg-logo="http://img.gamefaqs.net/screens/d/3/7/gfs_68851_1_5.jpg" group-title="Premium",Premium Carton Network
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/2449.ts
-#EXTINF:-1 tvg-ID="" tvg-name="Premium Cartoon Network  +1" tvg-logo="" group-title="+1",Premium Cartoon Network  +1
-http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/18718.ts
 #EXTINF:-1 tvg-ID="" tvg-name="---- < NOTIZIE > ---" tvg-logo="" group-title="",---- < NOTIZIE > ---
 http://lucky.lts1.net:23000/live/mindagaus/x6COWBCJmH/6640.ts
 #EXTINF:-1 tvg-ID="TG24.it" tvg-name="Sky TG 24 HD" tvg-logo="http://www.sat-address.com/f/pics/logotipi/Sky-TG-24_o.jpg" group-title="Notizie",Sky TG 24 HD

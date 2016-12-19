@@ -8,13 +8,15 @@ var os = require('os');
 var exec = require('child_process').exec;
 var player = require("./omxplayer.js");
 var skyLoader = require("./sky-loader.js");
-var NodeCEC = require('nodecec')
+var onDemandLoader = require("./ondemand-loader.js");
+var hdmiCEC = require("./hdmi-cec.js");
 var database = require('./database.js');
 var http = require('http');
 var request = require('sync-request');
 var parsers = require("playlist-parser");
 var utils = require('./utils.js');
 var moment = require('moment');
+
 
 var Server = function() {
 
@@ -45,18 +47,18 @@ this.start = function() {
     var port = server.address().port;
     console.log('app listening at http://%s:%s', host, port);
   
-   
-    skyLoader.init();
+    onDemandLoader.init();
+//    skyLoader.init();
 //    setTimeout(function() {
 //        database.ONDEMAND.remove({}, function (err, data) {});
-//        database.LUCKY_LIVE.remove({}, function (err, data) {});
+////        database.LUCKY_LIVE.remove({}, function (err, data) {});
 //        setLuckyChannelsOndemand();
-//        setTimeout(function() {
-//        	setLuckyChannelsLive();
-//            setTimeout(function() {
-//            	 skyLoader.init();
-//            }, 5000);
-//       }, 5000);
+////        setTimeout(function() {
+////        	setLuckyChannelsLive();
+////            setTimeout(function() {
+//////            	 skyLoader.init();
+////            }, 5000);
+////       }, 5000);
 //        
 //    }, 2000);
     
@@ -86,84 +88,14 @@ this.start = function() {
 			console.log("------- socket-youtube-play ----------------",file);
 			player.youtubePlay(file);
 		});
-	
-		
-		console.log("hostname",os.hostname().toLowerCase());
-		if(os.hostname().toLowerCase() === "minde"){
-			return;
-		}
-		
-		  var cec = new NodeCEC();
-
-		//start cec connection
-		cec.start();
-
-		cec.on('ready', function(data) {
-		   console.log("ready...");
-		});
-
-		cec.on('status', function(data) {
-		  console.log("[" + data.id + "] changed from " + data.from + " to " + data.to); 
-		});
-
-		cec.on('key', function(data) {
-		   console.log("key:",data.name, data);
-//		   pause { code: '46', name: 'pause' }
-//		   play { code: '44', name: 'play' }
-//		   stop { code: '45', name: 'stop' }
-//		   exit { code: 'd', name: 'exit' }
-//		   select { code: '0', name: 'select' }
-//		   forward { code: '4b', name: 'forward' }
-//		   backward { code: '4c', name: 'backward' }
-//		   F2 { code: 'red', name: 'F2' }
-//		   F3 { code: 'green', name: 'F3' }
-//		   F4 { code: 'yellow', name: 'F4' }
-//		   F1 { code: 'blue', name: 'F1' }
-//		   key: right { code: '4', name: 'right' }
-//		   key: left { code: '3', name: 'left' }
-//		   key: up { code: '1', name: 'up' }
-//		   key: down { code: '2', name: 'down' }
-
-		   
-		   
-		   if(data.name=="stop"){
-			   player.exit();
-		   }else if(data.name=="pause"){
-			   player.pause();
-		   }else if(data.name=="left"){
-			   player.back30();
-		   }else if(data.name=="right"){
-			   player.fwd30();
-		   }else if(data.name=="down"){
-			   player.fwd600();
-		   }else if(data.name=="up"){
-			   player.back600();
-		   }
-		   
-		});
-
-		cec.on('close', function(code) {
-		   process.exit(0);
-		});
-
-		cec.on('error', function(data) {
-		   console.log('---------------- ERROR ------------------');
-		   console.log(data);
-		   console.log('-----------------------------------------');
-		});
-
-		var stdin = process.openStdin();
-		stdin.on('data', function(chunk) { 
-		   cec.send(chunk);
-		});
-		
-		
-		
-		
 	  
   });
 
 
+  
+
+  
+  
 
 
 app.get("/set-programs", function (req, res) {
@@ -248,114 +180,6 @@ app.get("/get-ondemand-programs/:genere", function (req, res) {
 };
 
 };
-
-
-
-
-function setLuckyChannelsOndemand() {
-	var startDate = new Date();
-	console.log("-- setLuckyChannelsOndemand Start --");
-	try {
-	var res = request("GET","http://lucky.lts2.net:24000/get.php?username=mindagaus&password=wbrutd7DAp&type=m3u_plus&output=ts");
-	var body = res.getBody();
-	var b = new Buffer(body, 'binary');
-	fs.writeFileSync("playlist-ondemand.m3u", b);
-    var M3U = parsers.M3U;
-    var playlist = M3U.parse(fs.readFileSync("playlist-ondemand.m3u", { encoding: "utf8" }));
-    var group = "";
-    playlist.forEach(function(item) {
-    	var title = item.title;
-    	title = title
-    				.replace("-1 ","")
-    				.replace("tvg-name=\" ","tvg-name=\"")
-    				.replace("tvg-id=\"\" ","\"")
-    				.replace(/\" /g,"\", \"")
-    				.replace(/tvg-/g,"")
-    				.replace("group-","")
-    				.replace(/=\"/g,"\":\"");//replace all
-    	var entries = title.split(',');
-    	var entry = ("{"+entries[0]+","+entries[1]+","+entries[2]+"}").replace(/=\":\"/g,"=\""); 
-    	try {
-    		entry = JSON.parse(entry); 
-    		if (entry.name.indexOf("==") == 0){
-    			group = entry.name;
-    			return;
-    		}
-    		database.ONDEMAND.findOneAndUpdate({name: entry.name}, {title: entry.title, file:item.file, logo: ""+entry.logo, group:group}, {upsert : true}, function (err, res) {});
-		} catch (e) {
-			console.log(title,"\t\t", entry,"\t\t", item.title);
-		}
-	  });
-    
-	} catch (e) {
-		console.log("error setLuckyChannelsOndemand",e);
-	}	
-	var diff = moment(new Date()).diff(startDate, 'seconds');
-	console.log("-- setLuckyChannelsOndemand End --",diff);
-	
-}
-
-function setLuckyChannelsLive() {
-	var startDate = new Date();
-	console.log("-- setLuckyChannelsLive Start --");
-	try {
-		
-	
-	var res = request("GET","http://lucky.lts1.net:23000/get.php?username=mindagaus&password=x6COWBCJmH&type=m3u_plus&output=ts");
-	var body = res.getBody();
-	var b = new Buffer(body, 'binary');
-	fs.writeFileSync("playlist-live.m3u", b);
-    var M3U = parsers.M3U;
-    var playlist = M3U.parse(fs.readFileSync("playlist-live.m3u", { encoding: "utf8" }));
-    var group = "";
-    playlist.forEach(function(item) {
-    	var title = item.title;
-    	title = title
-    				.replace("-1 ","")
-    				.replace("tvg-name=\" ","tvg-name=\"")
-    				.replace("tvg-logo=\" ","tvg-logo=\"")
-    				.replace("tvg-id=\"\" ","\"")
-    				.replace(/\" /g,"\", \"")
-    				.replace(/tvg-/g,"")
-    				.replace("group-","")
-    				.replace(/=\"/g,"\":\"");//replace all
-    	var entries = title.split(',');
-    	var entry = ("{"+entries[1]+","+entries[2]+","+entries[3]+"}").replace(/=\":\"/g,"=\""); 
-    	try {
-    		entry = JSON.parse(entry); 
-    		if (entry.name.indexOf("---") == 0){
-    			group = entry.name;
-    			return;
-    		}
-    		entry.group = group;
-    		entry.imgBase64 = null;
-    		try {
-    			if(entry.logo && entry.logo !=""){
-    				var url = entry.logo;
-    				url = url.replace("i65.","oi65.")
-    				var res = request("GET",url);
-	        		var body = res.getBody();
-	        		entry.imgBase64 = new Buffer(body, 'binary').toString('base64');	
-    			}
-    		} catch (e) {
-    			console.log("error: ",title,"\t\t", entry,"\t\t", item.title);
-    		}
-    		database.LUCKY_LIVE.findOneAndUpdate({name: entry.name}, {imgBase64: entry.imgBase64, title: entry.title, file:item.file, logo: ""+entry.logo, group:group}, {upsert : true}, function (err, res) {
-    			console.log(err);
-    		});
-		} catch (e) {
-			console.log(title,"\t\t", entry,"\t\t", item.title);
-		}
-	  });
-
-	} catch (e) {
-		console.log("error setLuckyChannelsLive",e);
-	}
-	
-	var diff = moment(new Date()).diff(startDate, 'seconds');
-	console.log("-- setLuckyChannelsLive End --",diff);
-	
-}
 
 
 

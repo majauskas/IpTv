@@ -87,7 +87,7 @@
 					<li class="ui-nodisc-icon" id='${id}' data='${target}'>					
 					<a>
 						<p><font style="white-space:normal;font-weight:bold;">${name}</font></p>
-						<p class='ui-li-aside' style='margin-right:-30px; margin-top:-5px;'><img style="width: 80px; height: 40px" src='data:image/png;base64,${imgBase64}'></p>												
+						<p class='ui-li-aside' style='margin-right:-30px; margin-top:-5px;'><img style="width: 80px; height: 40px" src='${logo}'></p>												
 					</a></li>
 		</script>
 	</div>
@@ -152,8 +152,6 @@
 		<a id="trailer" target="_blank" data-role="button" data-icon="youtube">Trailer</a>   
 		<hr>   
 		<p id="description" style="text-shadow: none; color: white"></p>
-		<br>   
-<!-- 		<p id="description2" style="text-shadow: none; color: white"></p> -->
 	</div>
 	 
 </div>
@@ -187,18 +185,36 @@
 	<div data-role="main" class="ui-content" style="text-align: center; width: auto;" data-iscroll>        
 		<ul data-role="listview" data-inset="false" id="listview-ondemand-programs" class="ui-nodisc-icon"></ul>	
 		<script id="template-ondemand-programs" type="text/x-jquery-tmpl">
-					<li class="ui-nodisc-icon" id='${id}' data='${target}'>					
+					<li class="ui-nodisc-icon" file='${file}' name='${name}' description='${description}' thumbnail_url='${thumbnail_url}'  trailer_url='${trailer_url}' img_big_url='${img_big_url}'>					
 					<a>
+						{{if (img_small_url)}}<img style="width: 100%; height: 100%" src='${img_small_url}'>{{else}} <img style="width: 100%; height: 100%" src='${thumbnail_url}'>{{/if}}
 						<p><font style="white-space:normal;font-weight:bold;">${name}</font></p>
 					</a></li>
 		</script>
 	</div>
 </div>
 
+<div id="ONDEMAND-DETAIL-PAGE" data-role="page">
+	<div data-role="header" data-position="fixed">
+		<a id="btIndietro" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l"></a>
+		<h1><font style="white-space:normal;font-weight:normal;"></font></h1>
+		<a id="btStop" style="right: 120px" class="ui-btn ui-btn-right ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-power"></a>
+		<a id="btPause" style="right: 60px" class="ui-btn ui-btn-right ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-pause"></a>
+		<a id="btPlay" class="ui-btn ui-btn-right ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-video"></a>
+	</div>
+	<div data-role="main" class="ui-content" style="width: auto; padding:0px" data-iscroll>  
+		<p id="title" style="text-shadow: none; color: white; text-align: center; font-weight:bold;"></p>
+		<img style="width: 100%;" id="img"/>
+		<div style="padding:10px"><a id="trailer" target="_blank" data-role="button" data-icon="youtube">Trailer</a></div>   
+		<hr>   
+		<div style="padding:10px"><p id="description" style="text-shadow: none; color: white"></p></div>
+	</div>
+	 
+</div>
 
 <div id="menu-panel" data-role="panel" data-position="right" data-display="overlay" data-theme="a">
 	<ul data-role="listview" data-inset="false" class="ui-nodisc-icon">
-		<li><a href="#CHANNELS-GROUPS-PAGE">Channels</a></li>
+		<li><a href="#CHANNELS-GROUPS-PAGE">All Channels</a></li>
 		<li><a href="#GENERE-PAGE">Live Tv</a></li>
 		<li><a href="#ONDEMAND-GROUPS-PAGE">Ondemand Tv</a></li>
 	</ul>

@@ -18,7 +18,10 @@
     "playlist-parser": "0.0.12",
     "cheerio": "0.22.0",
     "moment": "2.9.0",
-    "cron": "*"
+    "cron": "*",
+    "youtube-dl": "1.11.1",
+    "iconv-lite": "*"
+    
   },
   "scripts": {
     "start": "electron ."
