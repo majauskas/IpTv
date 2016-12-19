@@ -8,6 +8,7 @@ var os = require('os');
 //var url = "mongodb://ajauskas.dyndns.org/test";
 //var url = "mongodb://192.168.0.2/test";
 var url = "mongodb://localhost/test";
+//var url = "mongodb://192.168.0.23/test";
 //console.log("hostname",os.hostname().toLowerCase());
 //if(os.hostname().toLowerCase() === "raspberrypi"){
 //	url = "mongodb://192.168.0.2/home-system-tv";

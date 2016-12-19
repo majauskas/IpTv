@@ -58,6 +58,7 @@ $(function() {
 		var description = $(this).attr("description");
 		if(!description) description = "";
 		$("#ONDEMAND-DETAIL-PAGE").attr("file", $(this).attr("file"));
+//		$("#ONDEMAND-DETAIL-PAGE").attr("trailer_url", $(this).attr("trailer_url"));
 		$('#ONDEMAND-DETAIL-PAGE #title').text($(this).attr("name"));
 		$('#ONDEMAND-DETAIL-PAGE #description').text(description);
 		$('#ONDEMAND-DETAIL-PAGE #img').attr("src",$(this).attr("thumbnail_url"));
@@ -72,7 +73,7 @@ $(function() {
 	
 	$("#ONDEMAND-DETAIL-PAGE").on("click", "#trailer", function (event) {
 		var file = $(this).attr("trailer_url");
-		socket.emit('socket-youtube-play', file);
+		socket.emit('socket-mobile-play', file);
 	});
 	
 	$("#ONDEMAND-DETAIL-PAGE").on("click", "#btPlay", function (event) {

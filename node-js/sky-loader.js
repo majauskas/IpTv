@@ -598,7 +598,7 @@ getProgrammaSky = function (callback) {
 		
 //	  setTimeout(startSync, 1000);
 		
-		getOndemandTrailer(function() {});
+//		getOndemandTrailer(function() {});
 //		getOndemandDescription(function() {});
 		
 	  

@@ -47,20 +47,9 @@ this.start = function() {
     var port = server.address().port;
     console.log('app listening at http://%s:%s', host, port);
   
-    onDemandLoader.init();
+//    onDemandLoader.init();
 //    skyLoader.init();
-//    setTimeout(function() {
-//        database.ONDEMAND.remove({}, function (err, data) {});
-////        database.LUCKY_LIVE.remove({}, function (err, data) {});
-//        setLuckyChannelsOndemand();
-////        setTimeout(function() {
-////        	setLuckyChannelsLive();
-////            setTimeout(function() {
-//////            	 skyLoader.init();
-////            }, 5000);
-////       }, 5000);
-//        
-//    }, 2000);
+
     
 
     
