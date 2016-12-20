@@ -177,6 +177,42 @@
 	</div>
 </div>
 
+
+<div id="ONDEMAND-SUBGROUPS-PAGE" data-role="page">
+	<div data-role="header" data-position="fixed">
+		<a href="#ONDEMAND-GROUPS-PAGE" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l"></a>
+		<h1><font style="white-space:normal;font-size: .7em; font-weight:normal;"></font></h1>
+	</div>
+	<div data-role="main" class="ui-content" style="text-align: center; width: auto;" data-iscroll>        
+		<ul data-role="listview" data-inset="false" id="listview-ondemand-subgroups" class="ui-nodisc-icon"></ul>	
+		<script id="template-ondemand-subgroups" type="text/x-jquery-tmpl">
+					<li class="ui-nodisc-icon" group='${_id}'>					
+					<a>
+						<p><font style="white-space:normal;font-weight:bold;">${_id}</font></p>
+						<p class='ui-li-aside'>${total}</p>												
+					</a></li>
+		</script>
+	</div>
+</div>
+
+<div id="ONDEMAND-SUBGROUPS-PROGRAMS-PAGE" data-role="page">
+	<div data-role="header" data-position="fixed">
+		<a href="#ONDEMAND-SUBGROUPS-PAGE" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l"></a>
+		<h1><font style="white-space:normal;font-size: .7em; font-weight:normal;"></font></h1>
+	</div>
+	<div data-role="main" class="ui-content" style="text-align: center; width: auto;" data-iscroll>        
+		<ul data-role="listview" data-inset="false" id="listview-ondemand-subgroups-programs" class="ui-nodisc-icon"></ul>	
+		<script id="template-ondemand-subgroups-programs" type="text/x-jquery-tmpl">
+					<li class="ui-nodisc-icon" file='${file}' name='${name}' description='${description}' thumbnail_url='${thumbnail_url}'  trailer_url='${trailer_url}' img_big_url='${img_big_url}'>					
+					<a>
+						<p><font style="white-space:normal;font-weight:bold;">${name}</font></p>
+					</a></li>
+		</script>
+	</div>
+</div>
+
+
+
 <div id="ONDEMAND-PROGRAMS-PAGE" data-role="page">
 	<div data-role="header" data-position="fixed">
 		<a id="btIndietro" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l"></a>

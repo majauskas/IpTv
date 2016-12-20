@@ -3,7 +3,6 @@
 var mongoose = require('mongoose');
 var os = require('os');
 
-//var url = "mongodb://ajauskas.homenet.org/home-system";
 //var url = "mongodb://192.168.7.94/test";
 //var url = "mongodb://ajauskas.dyndns.org/test";
 //var url = "mongodb://192.168.0.2/test";
@@ -85,7 +84,8 @@ var ProgramsSchema = new Schema({
 		img: String
   },
   cast : [],//{name,img}
-  trailer_url: String
+  trailer_url: String,
+  thumbnail_url: String
 },{toJSON:{virtuals: true}});
 
 module.exports.PROGRAMS = mongoose.model('PROGRAMS', ProgramsSchema);
@@ -107,7 +107,7 @@ var OndemandSchema = new Schema({
   description: String,
   img_small_url: String,
   img_big_url: String,
-  thumbnail_url: String,
+  thumbnail_url: String
 },{toJSON:{virtuals: true}});
 
 module.exports.ONDEMAND = mongoose.model('ONDEMAND', OndemandSchema);

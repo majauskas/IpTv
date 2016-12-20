@@ -154,6 +154,16 @@ app.get("/get-ondemand-groups", function (req, res) {
 	});
 });
 
+app.get("/get-ondemand-subgroups/:genere", function (req, res) {
+	var genere = req.params.genere;
+	database.ONDEMAND.aggregate(
+				{$match : {title : genere}},
+				{$group : {_id : "$group", total : { $sum : 1 }}},
+				{$sort : {_id : 1}}
+			).exec(function (err, programs) {
+		res.send(programs); 
+	});
+});
 
 app.get("/get-ondemand-programs/:genere", function (req, res) {
 	var genere = req.params.genere;
@@ -162,8 +172,13 @@ app.get("/get-ondemand-programs/:genere", function (req, res) {
 	});
 });
 
-
-
+app.get("/get-ondemand-programs/:genere/:group", function (req, res) {
+	var genere = req.params.genere;
+	var group = req.params.group;
+	database.ONDEMAND.find({ title:genere, group:group, file:{$ne : null}}).sort('name').exec(function (err, programs) {
+		res.send(programs); 
+	});
+});
 
 
 };
