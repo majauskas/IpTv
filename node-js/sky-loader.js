@@ -515,7 +515,7 @@ getProgrammaSky = function (callback) {
 		database.CHANNELS.findOne({file:{$ne : null}}).exec(function (err, channels) {
 			if(channels){
 				console.log('sync later');
-				new CronJob("00 01 06 * * *", function(){
+				new CronJob("00 01 04 * * *", function(){
 					console.log('job sync at ', new Date());
 					startSync();
 				},null, true, null, {});

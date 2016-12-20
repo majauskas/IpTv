@@ -358,7 +358,7 @@ function setLuckyChannelsOndemand(callBack) {
 		database.ONDEMAND.findOne().exec(function (err, channels) {
 			if(channels){
 				console.log('sync later');
-				new CronJob("00 01 05 * * *", function(){
+				new CronJob("00 01 02 * * *", function(){
 					console.log('job sync at ', new Date());
 					startSync();
 				},null, true, null, {});
