@@ -172,38 +172,52 @@ getProgrammaDetail = function (callback) {
 		  database.CHANNELS.find({file:{$ne : null}}).exec(function (err, channels) {
 			  var length = channels.length; 
 			  channels.forEach(function(channel) {
-				  var channelDetail = getChanelDetail(channel.id, new Date());
-				  channelDetail.plan.forEach(function(record) {
-					  if(record.id == -1) return;
-	  	    		  var time = record.starttime.split(':');
-	  	    		  var startDate = new Date();
-	  	    		  startDate.setHours(time[0], time[1],0,0);
+				  try {
+					  var channelDetail = getChanelDetail(channel.id, new Date());
+//					  length = length + channelDetail.plan.length;
+					  channelDetail.plan.forEach(function(record) {
+						  if(record.id == -1) return;
+						  length++;
+		  	    		  var time = record.starttime.split(':');
+		  	    		  var startDate = new Date();
+		  	    		  startDate.setHours(time[0], time[1],0,0);
 
-	  					 database.PROGRAMS.findOneAndUpdate({channel: channel.id, id : record.id}, {
-	      	    			  name: channel.name,
-	      	    			  file: channel.file,
-	      	    			  number: channel.number,
-	      	    			  service: channel.service,
-	      	    			  channellogo: channel.imgBase64,
-	      	    			  pid : record.pid, 
-	      	    			  starttime : record.starttime,
-	      	    			  startDate : startDate, 
-	      	    			  dur : record.dur, 
-	      	    			  title : record.title,
-	      	    			  normalizedtitle : record.normalizedtitle,
-	      	    			  desc : record.desc,
-	      	    			  genre : record.genre,
-	      	    			  subgenre : record.subgenre,
-	      	    			  prima : record.prima
-	      	    		  }, {upsert : true}, function (err, res) {
-	      	    			length--; 
-	      					if(length<1){
-	      						var diff = moment(new Date()).diff(startDate, 'seconds');
-	      						console.log("-- setPrograms End --", diff);
-	      						callback(); 
-	      					}
-	      	    		  });	   	  	    		 
-	  	    	  });
+		  					 database.PROGRAMS.findOneAndUpdate({channel: channel.id, id : record.id}, {
+		      	    			  name: channel.name,
+		      	    			  file: channel.file,
+		      	    			  number: channel.number,
+		      	    			  service: channel.service,
+		      	    			  channellogo: channel.imgBase64,
+		      	    			  pid : record.pid, 
+		      	    			  starttime : record.starttime,
+		      	    			  startDate : startDate, 
+		      	    			  dur : record.dur, 
+		      	    			  title : record.title,
+		      	    			  normalizedtitle : record.normalizedtitle,
+		      	    			  desc : record.desc,
+		      	    			  genre : record.genre,
+		      	    			  subgenre : record.subgenre,
+		      	    			  prima : record.prima
+		      	    		  }, {upsert : true}, function (err, res) {
+			      	    			length--; 
+			      					if(length<1){
+			      						var diff = moment(new Date()).diff(startDate, 'seconds');
+			      						console.log("-- setPrograms End --", diff);
+			      						callback(); 
+			      					}
+		      	    		  });	   	  	    		 
+		  	    	  });
+					  length--; 
+				} catch (e) {
+					console.log("error setPrograms",e);
+					length--;
+					if(length<1){
+						var diff = moment(new Date()).diff(startDate, 'seconds');
+						console.log("-- setPrograms End --", diff);
+						callback(); 
+					}
+				}
+				  
 			  });
 		  });
 		  
