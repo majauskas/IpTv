@@ -179,8 +179,8 @@ getProgrammaDetail = function (callback) {
 						  if(record.id == -1) return;
 						  length++;
 		  	    		  var time = record.starttime.split(':');
-		  	    		  var startDate = new Date();
-		  	    		  startDate.setHours(time[0], time[1],0,0);
+		  	    		  var beginDate = new Date();
+		  	    		  beginDate.setHours(time[0], time[1],0,0);
 
 		  					 database.PROGRAMS.findOneAndUpdate({channel: channel.id, id : record.id}, {
 		      	    			  name: channel.name,
@@ -190,7 +190,7 @@ getProgrammaDetail = function (callback) {
 		      	    			  channellogo: channel.imgBase64,
 		      	    			  pid : record.pid, 
 		      	    			  starttime : record.starttime,
-		      	    			  startDate : startDate, 
+		      	    			  startDate : beginDate, 
 		      	    			  dur : record.dur, 
 		      	    			  title : record.title,
 		      	    			  normalizedtitle : record.normalizedtitle,
@@ -526,7 +526,7 @@ getProgrammaSky = function (callback) {
 			
 		});
 		
-		startSync();
+//		startSync();
 	}
 	
 	
