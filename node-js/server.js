@@ -158,6 +158,7 @@ app.get("/get-ondemand-subgroups/:genere", function (req, res) {
 	var genere = req.params.genere;
 	database.ONDEMAND.aggregate(
 				{$match : {title : genere}},
+				{$match : {name : {$not:/Bud Spencer/}}},
 				{$group : {_id : "$group", total : { $sum : 1 }}},
 				{$sort : {_id : 1}}
 			).exec(function (err, programs) {

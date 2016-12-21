@@ -329,9 +329,28 @@ function setLuckyChannelsOndemand(callBack) {
     			length--;
     			return;
     		}
+    		var name4 = entry.name.substr(0, 4);
+    		if(entry.title == "===== SERIE TV - ITA ===="){
+    			if(group.indexOf(name4) != 0){
+    				var thenum = "-";
+    				var match = entry.name.match(/\d+/);
+    				if(match){
+    					thenum = match[0];
+    				}
+    				var index = entry.name.indexOf(thenum);
+    				if(index > 0){
+    					group = entry.name.substr(0, index).replace(/\./g," ").trim();
+    				}
+    				else{
+    					group = entry.name.replace(/\./g," ").trim();
+    				}
+    			}
+				
+			}
     		if(entry.title){
     			entry.title = entry.title.replace(/=/g,"").trim();
     		}
+    		
     		database.ONDEMAND.findOneAndUpdate({name: entry.name}, {title: entry.title, file:item.file, logo: ""+entry.logo, group:group}, {upsert : true}, function (err, res) {
     			length--;
     			if(length<1){
@@ -351,6 +370,8 @@ function setLuckyChannelsOndemand(callBack) {
 	}	
 	
 }
+
+
 
 
 	module.exports.init = function () {
