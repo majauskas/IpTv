@@ -46,9 +46,7 @@ $(function() {
 	
 	$("#PROGRAM-DETAIL-PAGE").on("click", "#trailer", function (event) {
 		var file = $(this).attr("trailer_url");
-		console.log(file);
-		socket.emit('socket-youtube-play', file);
-		
+		socket.emit('socket-mobile-play', file);
 	});
 
 

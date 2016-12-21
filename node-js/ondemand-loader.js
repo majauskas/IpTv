@@ -385,7 +385,7 @@ function setLuckyChannelsOndemand(callBack) {
 					getOndemandTrailer(function() {
 						getOndemandDescription(function() {
 							var diff = moment(new Date()).diff(startDate, 'seconds');
-							console.log("-- sync finished --", diff);
+							console.log("-- ondemand sync finished --", diff);
 						});
 					});
 				});

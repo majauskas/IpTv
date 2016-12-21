@@ -545,7 +545,7 @@ getProgrammaSky = function (callback) {
 		    		    			  getProgrammaDetailFromFilmtv(function() {
 		    		    				  getFilmTrailer(function() {
 		    				    			  var diff = moment(new Date()).diff(startDate, 'seconds');
-		    								  console.log("-- sync finished --", diff);
+		    								  console.log("-- sky-loader sync finished --", diff);
 		    						      }); 
 		    					      }); 
 		    				      });
