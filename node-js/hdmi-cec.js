@@ -18,7 +18,9 @@ var NodeCEC = require('nodecec')
 	});
 
 	cec.on('status', function(data) {
-	  console.log("[" + data.id + "] changed from " + data.from + " to " + data.to); 
+		if(data.to){
+			console.log("[" + data.id + "] changed from " + data.from + " to " + data.to); 
+		}
 	});
 
 	cec.on('key', function(data) {
